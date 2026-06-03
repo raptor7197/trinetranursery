@@ -120,22 +120,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Gallery Filter logic (since it's just a static site)
+    // Gallery Filter Logic
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('cat');
-    if (category && window.location.pathname.includes('gallery.html')) {
-        // In a real app, we'd filter the grid.
-        // For this demo, we'll just log it or highlight the active filter button
-        const filterBtns = document.querySelectorAll('.gallery-grid .btn');
-        filterBtns.forEach(btn => {
-            if (btn.getAttribute('href').includes(category)) {
-                btn.classList.remove('btn-outline');
-                btn.classList.add('btn-primary');
-            } else if (!btn.textContent.includes('All')) {
-                btn.classList.remove('btn-primary');
-                btn.classList.add('btn-outline');
-            }
-        });
+
+    if (window.location.pathname.includes('gallery.html')) {
+        const filterBtns = document.querySelectorAll('section[style*="background: var(--bg-surface)"] .btn');
+        const galleryItems = document.querySelectorAll('.gallery-grid-items .card');
+
+        const filterGallery = (cat) => {
+            galleryItems.forEach(item => {
+                if (!cat || cat === 'all' || item.dataset.category === cat) {
+                    item.style.display = 'block';
+                    setTimeout(() => { item.classList.add('visible'); }, 10);
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('visible');
+                }
+            });
+
+            // Update UI buttons
+            filterBtns.forEach(btn => {
+                const btnCat = new URLSearchParams(btn.getAttribute('href').split('?')[1]).get('cat');
+                if ((!cat && btn.textContent.trim() === 'All') || btnCat === cat) {
+                    btn.classList.remove('btn-outline');
+                    btn.classList.add('btn-primary');
+                } else {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-outline');
+                }
+            });
+        };
+
+        // Initial filter from URL
+        filterGallery(category);
     }
 
     // Header background change on scroll
@@ -149,4 +167,68 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
         }
     });
+
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+
+            // Animate Toggle
+            mobileMenu.classList.toggle('toggle');
+        });
+    }
+
+    // Mobile Dropdown Toggle
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+
+    // Hero Search Logic
+    const searchBtn = document.querySelector('.search-container .btn');
+    const searchInput = document.querySelector('.search-container input');
+
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.toLowerCase().trim();
+            if (query) {
+                // Redirect to gallery with a search query (simulated for now)
+                window.location.href = `gallery.html?search=${encodeURIComponent(query)}`;
+            }
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+
+    // Handle Search in Gallery
+    const searchQuery = urlParams.get('search');
+    if (searchQuery && window.location.pathname.includes('gallery.html')) {
+        const galleryItems = document.querySelectorAll('.gallery-grid-items .card');
+        galleryItems.forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const desc = item.querySelector('p').textContent.toLowerCase();
+            if (title.includes(searchQuery) || desc.includes(searchQuery)) {
+                item.style.display = 'block';
+                item.classList.add('visible');
+            } else {
+                item.style.display = 'none';
+                item.classList.remove('visible');
+            }
+        });
+
+        // Update header for search
+        const galleryTitle = document.querySelector('h1');
+        if (galleryTitle) galleryTitle.textContent = `Search Results for: "${searchQuery}"`;
+    }
 });
