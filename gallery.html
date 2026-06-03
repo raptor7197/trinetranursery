@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - GreenVibes Nursery</title>
+    <title>Collections - Trinetra Nursery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">GREENVIBES NURSERY</div>
+                <div class="logo">TRINETRA NURSERY</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="gallery.html" class="active">Collections <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
+                            <li><a href="gallery.html?cat=bonsai">Bonsai</a></li>
+                            <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
+                            <li><a href="gallery.html?cat=flower">Flower Plants</a></li>
+                            <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
+                            <li><a href="gallery.html?cat=exotic">Exotic Collection</a></li>
+                        </ul>
+                    </li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -24,55 +35,104 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header section-padding" style="background: var(--primary-color); color: white; text-align: center; padding: 60px 0;">
+    <section class="page-header section-padding bg-green" style="text-align: center; padding: 100px 0;">
         <div class="container">
-            <h1>Our Gallery</h1>
-            <p>Explore our diverse collection of premium plants.</p>
+            <h1 style="font-size: 3.5rem; margin-bottom: 15px;">Our Collections</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Explore our diverse range of healthy, premium plant species.</p>
         </div>
     </section>
 
     <!-- Gallery Grid -->
     <section class="gallery-grid section-padding">
         <div class="container">
+            <!-- Filter Bar (Simulated) -->
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 50px;">
+                <a href="gallery.html" class="btn btn-primary" style="padding: 10px 20px;">All</a>
+                <a href="?cat=indoor" class="btn btn-outline" style="padding: 10px 20px;">Indoor</a>
+                <a href="?cat=fruit" class="btn btn-outline" style="padding: 10px 20px;">Fruit</a>
+                <a href="?cat=flower" class="btn btn-outline" style="padding: 10px 20px;">Flower</a>
+                <a href="?cat=bonsai" class="btn btn-outline" style="padding: 10px 20px;">Bonsai</a>
+                <a href="?cat=palm" class="btn btn-outline" style="padding: 10px 20px;">Palms</a>
+                <a href="?cat=exotic" class="btn btn-outline" style="padding: 10px 20px;">Exotic</a>
+            </div>
+
             <div class="product-grid">
-                <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 1" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow);">
-                <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 2" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.1s;">
-                <img src="https://images.unsplash.com/photo-1416870213410-d472dfa796a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 3" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.2s;">
-                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 4" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.3s;">
-                <img src="https://images.unsplash.com/photo-1530633173740-6b80d4159677?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 5" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.4s;">
-                <img src="https://images.unsplash.com/photo-1463930649705-351f05ef014a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 6" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.5s;">
-                <img src="https://images.unsplash.com/photo-1520412099561-648310902e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 7" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.6s;">
-                <img src="https://images.unsplash.com/photo-1525498122383-3f5333f21ed8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Plant 8" class="animate-on-scroll" style="border-radius: 4px; box-shadow: var(--shadow); animation-delay: 0.7s;">
+                <div class="card animate-on-scroll">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 1">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 2">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1416870213410-d472dfa796a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 3">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 4">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1530633173740-6b80d4159677?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 5">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1463930649705-351f05ef014a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 6">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.6s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1520412099561-648310902e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 7">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="animation-delay: 0.7s;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1525498122383-3f5333f21ed8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant 8">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- WhatsApp Redirect -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <h3 style="margin-bottom: 20px;">GREENVIBES NURSERY</h3>
-                    <p style="color: #bbb;">Providing high-quality plants at affordable prices. Your one-stop shop for all gardening needs.</p>
+                    <h2 style="margin-bottom: 25px; color: var(--white); font-weight: 800;">TRINETRA NURSERY</h2>
+                    <p style="color: #ccc; line-height: 1.8; margin-bottom: 30px;">Rooted in quality, growing with passion. Your one-stop shop for all gardening and landscaping needs since 2004.</p>
                 </div>
                 <div>
-                    <h3 style="margin-bottom: 20px;">Quick Links</h3>
-                    <ul style="color: #bbb;">
-                        <li style="margin-bottom: 10px;"><a href="index.html">Home</a></li>
-                        <li style="margin-bottom: 10px;"><a href="about.html">About Us</a></li>
-                        <li style="margin-bottom: 10px;"><a href="services.html">Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html">Contact</a></li>
+                    <h3 style="margin-bottom: 25px; color: var(--accent-tan);">Quick Links</h3>
+                    <ul style="color: #ccc;">
+                        <li style="margin-bottom: 12px;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="about.html">About Us</a></li>
+                        <li style="margin-bottom: 12px;"><a href="gallery.html">Collections</a></li>
+                        <li style="margin-bottom: 12px;"><a href="services.html">Our Services</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="margin-bottom: 20px;">Contact Info</h3>
-                    <p style="color: #bbb;">📍 Nursery Location, AP</p>
-                    <p style="color: #bbb;">📞 +91 00000 00000</p>
-                    <p style="color: #bbb;">✉️ info@greenvibesnursery.com</p>
+                    <h3 style="margin-bottom: 25px; color: var(--accent-tan);">Contact Info</h3>
+                    <p style="color: #ccc; margin-bottom: 15px;">📍 Kadiyam Road, East Godavari, AP</p>
+                    <p style="color: #ccc; margin-bottom: 15px;">📞 +91 12345 67890</p>
+                    <p style="color: #ccc; margin-bottom: 15px;">✉️ info@trinetranursery.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GreenVibes Nursery. All Rights Reserved. | Designed by Gemini CLI</p>
+                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
