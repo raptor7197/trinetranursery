@@ -3,220 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Collections - Trinetra Nursery</title>
+    <title>Plant Collections - Trinetra Nursery</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +91 94926 66767</span>
-                <span><i class="fas fa-envelope"></i> info@trinetranursery.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Kadiyam Road, AP</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">TRINETRA NURSERY</a>
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/150x50?text=TRINETRA" alt="Trinetra Nursery" class="logo-img">
+            </a>
+            
+            <nav class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Plants</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/918688644443" class="btn btn-primary whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="gallery.html" class="active">Collections <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                            <li><a href="gallery.html?cat=bonsai">Bonsai</a></li>
-                            <li><a href="gallery.html?cat=shrubs">Shrubs</a></li>
-                            <li><a href="gallery.html?cat=creepers">Creepers</a></li>
-                            <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                            <li><a href="gallery.html?cat=flower">Flower Plants</a></li>
-                            <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                            <li><a href="gallery.html?cat=avenue">Avenue Plants</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="index.html#order" class="btn btn-primary" style="padding: 8px 16px;">Get a Quote</a></li>
-                </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="section-padding" style="background-color: var(--primary-dark); color: white; text-align: center;">
-        <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 10px;">Plant Collections</h1>
-            <p style="opacity: 0.8; font-size: 1.1rem;">Explore our diverse range of healthy, premium plant species.</p>
+    <section class="page-header">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Collections Header">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-wrapper">
+            <h1 class="hero-headline">Plant Collections</h1>
+            <p class="hero-description">Explore our diverse range of healthy, premium plant species.</p>
         </div>
     </section>
 
     <!-- Filter Bar -->
-    <section style="background: var(--bg-surface); padding: 20px 0; border-bottom: 1px solid var(--border-color);">
+    <section class="filter-bar" style="background: var(--warm-white); padding: 30px 0; border-bottom: 1px solid var(--border-color); position: sticky; top: 80px; z-index: 100;">
         <div class="container">
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                <a href="gallery.html" class="btn btn-primary" style="padding: 8px 16px;">All</a>
-                <a href="?cat=indoor" class="btn btn-outline" style="padding: 8px 16px;">Indoor</a>
-                <a href="?cat=bonsai" class="btn btn-outline" style="padding: 8px 16px;">Bonsai</a>
-                <a href="?cat=shrubs" class="btn btn-outline" style="padding: 8px 16px;">Shrubs</a>
-                <a href="?cat=creepers" class="btn btn-outline" style="padding: 8px 16px;">Creepers</a>
-                <a href="?cat=fruit" class="btn btn-outline" style="padding: 8px 16px;">Fruit</a>
-                <a href="?cat=flower" class="btn btn-outline" style="padding: 8px 16px;">Flower</a>
-                <a href="?cat=palm" class="btn btn-outline" style="padding: 8px 16px;">Palms</a>
-                <a href="?cat=avenue" class="btn btn-outline" style="padding: 8px 16px;">Avenue</a>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <a href="gallery.html" class="btn btn-primary" style="padding: 10px 20px;">All</a>
+                <a href="?cat=indoor" class="btn btn-outline" style="padding: 10px 20px;">Indoor</a>
+                <a href="?cat=flower" class="btn btn-outline" style="padding: 10px 20px;">Flower</a>
+                <a href="?cat=fruit" class="btn btn-outline" style="padding: 10px 20px;">Fruit</a>
+                <a href="?cat=tall" class="btn btn-outline" style="padding: 10px 20px;">Tall</a>
+                <a href="?cat=gift" class="btn btn-outline" style="padding: 10px 20px;">Gift</a>
+                <a href="?cat=bonsai" class="btn btn-outline" style="padding: 10px 20px;">Bonsai</a>
+                <a href="?cat=avenue" class="btn btn-outline" style="padding: 10px 20px;">Avenue</a>
+                <a href="?cat=palm" class="btn btn-outline" style="padding: 10px 20px;">Palms</a>
+                <a href="?cat=imported" class="btn btn-outline" style="padding: 10px 20px;">Imported</a>
+                <a href="?cat=pots" class="btn btn-outline" style="padding: 10px 20px;">Pots</a>
             </div>
         </div>
     </section>
 
     <!-- Gallery Grid -->
-    <section class="section-padding">
+    <section class="section-padding" style="background-color: var(--bg-cream);">
         <div class="container">
             <div class="grid gallery-grid-items">
                 <!-- Indoor -->
                 <div class="card animate-on-scroll" data-category="indoor">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
+                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Snake Plant">
                     </div>
                     <div class="card-body">
                         <h3>Snake Plant</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Premium air-purifying indoor varieties.</p>
+                        <p class="about-text">Premium air-purifying indoor varieties. Perfect for low light conditions.</p>
+                        <a href="https://wa.me/918688644443" class="btn-text">Inquiry <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" data-category="indoor">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1512428813824-f713cb752935?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Monstera">
+                    </div>
+                    <div class="card-body">
+                        <h3>Monstera Deliciosa</h3>
+                        <p class="about-text">Iconic tropical indoor plant with signature split leaves.</p>
+                        <a href="https://wa.me/918688644443" class="btn-text">Inquiry <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <!-- Bonsai -->
                 <div class="card animate-on-scroll" data-category="bonsai">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1416870213410-d472dfa796a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
+                        <img src="https://images.unsplash.com/photo-1512428813824-f713cb752935?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ficus Bonsai">
                     </div>
                     <div class="card-body">
-                        <h3>Juniper Bonsai</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Expertly shaped miniature trees.</p>
+                        <h3>Ficus Bonsai</h3>
+                        <p class="about-text">Artistically shaped miniature masterpieces for your desk or garden.</p>
+                        <a href="https://wa.me/918688644443" class="btn-text">Inquiry <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <!-- Fruit -->
                 <div class="card animate-on-scroll" data-category="fruit">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
+                        <img src="https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mango Tree">
                     </div>
                     <div class="card-body">
-                        <h3>Mango Hybrid</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Fast-growing, high-yield saplings.</p>
+                        <h3>Mango Sapling</h3>
+                        <p class="about-text">High-yield hybrid mango varieties including Banganapalli and Totapuri.</p>
+                        <a href="https://wa.me/918688644443" class="btn-text">Inquiry <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <!-- Shrubs -->
-                <div class="card animate-on-scroll" data-category="shrubs">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
-                    </div>
-                    <div class="card-body">
-                        <h3>Golden Duranta</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Perfect for gardens and borders.</p>
-                    </div>
-                </div>
-                <!-- Flower -->
-                <div class="card animate-on-scroll" data-category="flower">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1530633173740-6b80d4159677?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
-                    </div>
-                    <div class="card-body">
-                        <h3>Hibiscus Selection</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Vibrant blooms from around the world.</p>
-                    </div>
-                </div>
-                <!-- Palm -->
-                <div class="card animate-on-scroll" data-category="palm">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1463930649705-351f05ef014a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
-                    </div>
-                    <div class="card-body">
-                        <h3>Royal Palm</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Majestic trees for luxury landscapes.</p>
-                    </div>
-                </div>
-                <!-- Creepers -->
-                <div class="card animate-on-scroll" data-category="creepers">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
-                    </div>
-                    <div class="card-body">
-                        <h3>Money Plant</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Fast-growing ornamental creepers.</p>
-                    </div>
-                </div>
-                <!-- Avenue -->
-                <div class="card animate-on-scroll" data-category="avenue">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plant">
-                    </div>
-                    <div class="card-body">
-                        <h3>Rain Tree</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Excellent shade trees for large areas.</p>
-                    </div>
-                </div>
+                <!-- Add more as needed or keep as placeholder -->
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Redirect -->
-    <a href="https://wa.me/919492666767" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h2 style="color: var(--white); margin-bottom: 25px;">TRINETRA NURSERY</h2>
-                    <p style="color: #adb5bd; font-size: 0.9rem; line-height: 1.8;">One of the premier destinations for quality plants and professional landscaping services in Kadiyam road. We bring nature to your doorstep.</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Collections</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Collections</h3>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                        <li><a href="gallery.html?cat=bonsai">Bonsai Collection</a></li>
-                        <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                        <li><a href="gallery.html?cat=shrubs">Shrubs & Creepers</a></li>
-                        <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📍 Kadiyam Road, East Godavari, AP</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📞 +91 94926 66767</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">✉️ info@trinetranursery.com</p>
+    <footer class="premium-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="https://via.placeholder.com/180x60?text=TRINETRA" alt="Trinetra Nursery" class="footer-logo">
+                <p>Premium plants and landscaping expertise since 1998. We transform spaces with nature's artistry.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Standard Industrial Design</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Landscaping</a></li>
+                    <li><a href="gallery.html">Plant Selling</a></li>
+                    <li><a href="services.html">Gardening</a></li>
+                    <li><a href="services.html">Irrigation</a></li>
+                    <li><a href="services.html">Renovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone-alt"></i> 8688644443</li>
+                    <li><i class="fas fa-phone-alt"></i> 9133342334</li>
+                    <li><i class="fas fa-envelope"></i> trinetranursery@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Near GNR Function Hall, Veeravaram Road, Kadiam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Designed for Excellence</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/918688644443" class="fab-btn whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8688644443" class="fab-btn call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://goo.gl/maps/example" class="fab-btn map" title="Directions"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Simple Gallery Filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('cat');
+            
+            if (category) {
+                const items = document.querySelectorAll('.gallery-grid-items .card');
+                items.forEach(item => {
+                    if (item.getAttribute('data-category') !== category) {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

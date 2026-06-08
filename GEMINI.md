@@ -1,25 +1,34 @@
-# Grow More Nursery Clone
+# Trinetra Nursery - Premium Landscaping & Nursery
 
 ## Project Overview
-A clone of growmorenursery.com focusing on high-quality visuals, responsive design, and functional sections.
+A premium nursery and landscaping brand website for Trinetra Nursery, featuring modern organic luxury aesthetics, cinematic visuals, and interactive user experiences.
 
 ## Tech Stack
-- HTML5
-- CSS3 (Vanilla CSS)
-- JavaScript (Vanilla JS)
+- HTML5 (Semantic)
+- CSS3 (Vanilla CSS with Glassmorphism & Animations)
+- JavaScript (Vanilla JS with Intersection Observer)
 
 ## Design System
 - **Colors:**
-  - Primary: #2e7d32 (Green)
-  - Secondary: #ffffff (White)
-  - Background: #f5f5f5 (Light Gray)
-  - Text: #212121 (Dark Gray)
+  - Primary: #1B4332 (Forest Green)
+  - Secondary: #2D6A4F (Medium Green)
+  - Background: #F8F9F3 (Cream)
+  - Accent: #D4A373 (Gold)
 - **Typography:**
-  - Font Family: 'Inter', sans-serif (Google Fonts)
+  - Headings: 'Playfair Display', serif
+  - Body: 'Inter', sans-serif
 
-## Navigation Links
+## Core Sections
+- **Hero:** Full-viewport cinematic experience with floating collage.
+- **Trust Metrics:** Animated counters for projects and experience.
+- **Services:** Premium cards for landscaping, plant selling, and garden solutions.
+- **Landscaping Gallery:** Masonry layout showcasing high-end project results.
+- **Plant Collections:** 10 categories with interactive hover effects.
+- **Proprietors:** Profile cards for V.V. Rao and V.T. Srinivasu.
+
+## Navigation
 - Home (index.html)
 - About (about.html)
 - Services (services.html)
-- Gallery (gallery.html)
+- Plants/Gallery (gallery.html)
 - Contact (contact.html)

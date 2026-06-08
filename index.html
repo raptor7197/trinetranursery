@@ -8,96 +8,401 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +91 94926 66767</span>
-                <span><i class="fas fa-envelope"></i> info@trinetranursery.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Kadiyam Road, AP</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">TRINETRA NURSERY</a>
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/150x50?text=TRINETRA" alt="Trinetra Nursery" class="logo-img">
+            </a>
+            
+            <nav class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/918688644443" class="btn btn-primary whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="gallery.html">Collections <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                            <li><a href="gallery.html?cat=bonsai">Bonsai</a></li>
-                            <li><a href="gallery.html?cat=shrubs">Shrubs</a></li>
-                            <li><a href="gallery.html?cat=creepers">Creepers</a></li>
-                            <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                            <li><a href="gallery.html?cat=flower">Flower Plants</a></li>
-                            <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                            <li><a href="gallery.html?cat=avenue">Avenue Plants</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#order" class="btn btn-primary" style="padding: 8px 16px;">Get a Quote</a></li>
-                </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
-        <div class="hero-content">
-            <h1 class="animate-on-scroll">Premium Nursery Gardens</h1>
-            <p class="animate-on-scroll">Rooted in quality, growing with passion. Your destination for premium plants and professional landscaping.</p>
-
-            <div class="search-container animate-on-scroll">
-                <input type="text" placeholder="Search for plants (e.g. Bonsai, Mango...)">
-                <button class="btn btn-primary">Search</button>
+    <section class="hero-revamp">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Nursery Aerial View">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-wrapper">
+            <div class="hero-content-left">
+                <h1 class="hero-headline">Trinetra Nursery</h1>
+                <h2 class="hero-subheadline">Premium Plants &bull; Landscaping &bull; Garden Solutions</h2>
+                <p class="hero-description">Serving customers with quality plants, landscaping expertise and garden transformations that breathe life into your space.</p>
+                <div class="hero-ctas">
+                    <a href="gallery.html" class="btn btn-primary">Explore Plants</a>
+                    <a href="contact.html" class="btn btn-outline" style="border-color: var(--warm-white); color: var(--warm-white);">Contact Us</a>
+                </div>
             </div>
 
-            <div class="animate-on-scroll" style="display: flex; gap: 10px; justify-content: center; font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">
-                <span>Popular:</span>
-                <a href="gallery.html?cat=shrubs" style="color: var(--white); text-decoration: underline;">Shrubs</a>
-                <a href="gallery.html?cat=bonsai" style="color: var(--white); text-decoration: underline;">Bonsai</a>
-                <a href="gallery.html?cat=fruit" style="color: var(--white); text-decoration: underline;">Fruit Plants</a>
+            <div class="hero-content-right">
+                <div class="floating-collage">
+                    <div class="collage-item item-1 glass-card">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Nursery photo">
+                    </div>
+                    <div class="collage-item item-2 glass-card">
+                        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Landscaping project">
+                    </div>
+                    <div class="collage-item item-3 glass-card">
+                        <img src="https://images.unsplash.com/photo-1558905612-25f00e00f913?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Garden installation">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Welcome / About Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
-                <div class="animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nursery" style="width: 100%; border: 10px solid var(--bg-surface);">
+    <!-- Trust Metrics Section -->
+    <section class="trust-metrics">
+        <div class="container metrics-grid">
+            <div class="metric-card glass-card">
+                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                <h3 class="metric-number" data-target="200">0</h3>
+                <p class="metric-label">Projects Completed</p>
+            </div>
+            <div class="metric-card glass-card">
+                <div class="metric-icon"><i class="fas fa-heart"></i></div>
+                <h3 class="metric-number" data-target="90">0</h3>
+                <p class="metric-label">Positive Feedback (%)</p>
+            </div>
+            <div class="metric-card glass-card">
+                <div class="metric-icon"><i class="fas fa-leaf"></i></div>
+                <h3 class="metric-number" data-target="500">0</h3>
+                <p class="metric-label">Plant Varieties</p>
+            </div>
+            <div class="metric-card glass-card">
+                <div class="metric-icon"><i class="fas fa-award"></i></div>
+                <h3 class="metric-number" data-target="15">0</h3>
+                <p class="metric-label">Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Trinetra Nursery -->
+    <section class="about-premium">
+        <div class="container about-wrapper">
+            <div class="about-content">
+                <h5 class="about-subtitle">Premium Landscaping Since 1998</h5>
+                <h2 class="about-title">Bringing Artistry to Your Garden</h2>
+                <p class="about-text">Trinetra Nursery is more than just a place to buy plants; we are your partners in creating breathtaking outdoor living spaces. Founded with a passion for botany and a vision for premium landscaping, we have spent over two decades serving as Kadiyam's premier nursery.</p>
+                <p class="about-text">Our expertise spans from supplying the rarest plant varieties to executing complex landscaping projects for residential and commercial spaces. Every plant we grow and every garden we design reflects our commitment to quality and sustainability.</p>
+                
+                <div class="about-features">
+                    <div class="feature-badge">
+                        <i class="fas fa-check"></i>
+                        <span>Quality Plants</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-check"></i>
+                        <span>Trusted Nursery</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-check"></i>
+                        <span>Landscaping Experts</span>
+                    </div>
                 </div>
-                <div class="animate-on-scroll">
-                    <h5 class="text-primary" style="text-transform: uppercase; letter-spacing: 2px;">Welcome to Trinetra Nursery</h5>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Rooted in Quality Since 1998</h2>
-                    <p style="margin-bottom: 20px; color: var(--text-muted); line-height: 1.8;">Founded by <strong>P.V.V.S.N. Murthy</strong>, Trinetra Nursery has been a cornerstone of the Kadiyam plant community for over two decades. We specialize in providing high-quality indoor plants, fruit trees, and ornamental shrubs to garden enthusiasts and commercial landscapers alike.</p>
-                    <p style="margin-bottom: 30px; color: var(--text-muted); line-height: 1.8;">Our mission is to bring nature closer to your life by offering the finest selection of plants and expert gardening advice. We take pride in our sustainable growing practices and our commitment to customer satisfaction.</p>
-                    <div style="display: flex; gap: 30px;">
-                        <div>
-                            <h3 style="color: var(--primary-color); font-size: 2rem;">25+</h3>
-                            <p style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Years Experience</p>
+
+                <a href="about.html" class="btn btn-primary" style="margin-top: 30px;">Discover Our Story</a>
+            </div>
+
+            <div class="about-image-wrapper">
+                <div class="about-main-image">
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Trinetra Nursery Grounds">
+                </div>
+                <div class="about-shape"></div>
+                <div class="floating-badge badge-top glass-card">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certified Quality</span>
+                </div>
+                <div class="floating-badge badge-bottom glass-card">
+                    <i class="fas fa-user-check"></i>
+                    <span>200+ Happy Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-premium" id="services">
+        <div class="container">
+            <h5 class="about-subtitle" style="text-align: center;">Our Expertise</h5>
+            <h2 class="section-title">Nursery & Landscaping Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558905612-25f00e00f913?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Landscaping">
+                    </div>
+                    <div class="service-content">
+                        <h3>Landscaping</h3>
+                        <p>Complete outdoor transformations from design to execution for homes and businesses.</p>
+                        <a href="services.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Plant Selling">
+                    </div>
+                    <div class="service-content">
+                        <h3>Plant Selling</h3>
+                        <p>A vast collection of premium quality indoor and outdoor plants at wholesale prices.</p>
+                        <a href="gallery.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1592150621344-22d507119106?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Gardening">
+                    </div>
+                    <div class="service-content">
+                        <h3>Gardening</h3>
+                        <p>Professional garden maintenance and advisory to keep your green spaces thriving.</p>
+                        <a href="services.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Irrigation Systems">
+                    </div>
+                    <div class="service-content">
+                        <h3>Irrigation Systems</h3>
+                        <p>Smart and efficient watering solutions tailored to your landscape's needs.</p>
+                        <a href="services.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Garden Renovation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Garden Renovation</h3>
+                        <p>Breathe new life into existing gardens with modern designs and healthy plants.</p>
+                        <a href="services.html" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Landscaping Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <h5 class="about-subtitle" style="text-align: center;">Masterpieces</h5>
+            <h2 class="section-title">Featured Landscaping Works</h2>
+            
+            <div class="masonry-gallery">
+                <div class="masonry-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1558905612-25f00e00f913?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 1">
+                    <div class="project-overlay">
+                        <h4>Royal Villa Garden</h4>
+                        <p>Landscaping & Irrigation</p>
+                    </div>
+                </div>
+                <div class="masonry-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1582147407474-270296704940?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 2">
+                    <div class="project-overlay">
+                        <h4>Corporate Greenery</h4>
+                        <p>Office Landscaping</p>
+                    </div>
+                </div>
+                <div class="masonry-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1592150621344-22d507119106?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 3">
+                    <div class="project-overlay">
+                        <h4>Zen Garden Retreat</h4>
+                        <p>Renovation</p>
+                    </div>
+                </div>
+                <div class="masonry-item animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 4">
+                    <div class="project-overlay">
+                        <h4>Modern Lawn Design</h4>
+                        <p>Landscaping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plant Collections Section -->
+    <section class="plant-collections" id="plants">
+        <div class="container">
+            <h5 class="about-subtitle" style="text-align: center;">Our Greenhouse</h5>
+            <h2 class="section-title">Premium Plant Collections</h2>
+            
+            <div class="collections-grid">
+                <!-- Categories from prompt -->
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Indoor Plants">
+                    <div class="collection-overlay">
+                        <h3>Indoor Plants</h3>
+                        <span class="plant-count">50+ Varieties</span>
+                        <a href="gallery.html?cat=indoor" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1464333033735-4244c6dd100b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Flower Plants">
+                    <div class="collection-overlay">
+                        <h3>Flower Plants</h3>
+                        <span class="plant-count">100+ Varieties</span>
+                        <a href="gallery.html?cat=flower" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Fruit Plants">
+                    <div class="collection-overlay">
+                        <h3>Fruit Plants</h3>
+                        <span class="plant-count">80+ Varieties</span>
+                        <a href="gallery.html?cat=fruit" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb773b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Tall Plants">
+                    <div class="collection-overlay">
+                        <h3>Tall Plants</h3>
+                        <span class="plant-count">30+ Varieties</span>
+                        <a href="gallery.html?cat=tall" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1584444262846-e2716db1294b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Gift Plants">
+                    <div class="collection-overlay">
+                        <h3>Gift Plants</h3>
+                        <span class="plant-count">40+ Varieties</span>
+                        <a href="gallery.html?cat=gift" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1512428813824-f713cb752935?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Bonsai Plants">
+                    <div class="collection-overlay">
+                        <h3>Bonsai Plants</h3>
+                        <span class="plant-count">20+ Varieties</span>
+                        <a href="gallery.html?cat=bonsai" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Avenues">
+                    <div class="collection-overlay">
+                        <h3>Avenues</h3>
+                        <span class="plant-count">60+ Varieties</span>
+                        <a href="gallery.html?cat=avenue" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1597055000551-098553256037?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Palms">
+                    <div class="collection-overlay">
+                        <h3>Palms</h3>
+                        <span class="plant-count">15+ Varieties</span>
+                        <a href="gallery.html?cat=palm" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1599598477610-184561042784?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Imported Plants">
+                    <div class="collection-overlay">
+                        <h3>Imported</h3>
+                        <span class="plant-count">25+ Varieties</span>
+                        <a href="gallery.html?cat=imported" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="collection-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1599598177991-ec774549b59e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Pots">
+                    <div class="collection-overlay">
+                        <h3>Pots</h3>
+                        <span class="plant-count">200+ Designs</span>
+                        <a href="gallery.html?cat=pots" class="btn-circle"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h5 class="about-subtitle" style="text-align: center;">The Trinetra Edge</h5>
+            <h2 class="section-title">Why Choose Our Nursery</h2>
+            
+            <div class="alternating-grid">
+                <div class="alt-row animate-on-scroll">
+                    <div class="alt-image">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Premium Quality">
+                    </div>
+                    <div class="alt-content">
+                        <h3>Premium Plant Quality</h3>
+                        <p>We nurture every plant with scientific precision and organic care, ensuring you receive healthy, vibrant life for your space.</p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i> Disease-free saplings</li>
+                            <li><i class="fas fa-check"></i> Acclimatized varieties</li>
+                            <li><i class="fas fa-check"></i> Organic nurturing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="alt-row animate-on-scroll">
+                    <div class="alt-content">
+                        <h3>Experienced Team</h3>
+                        <p>Our horticulturists and landscaping architects bring over 15 years of field experience to every project we undertake.</p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check"></i> Expert consultation</li>
+                            <li><i class="fas fa-check"></i> Professional planting</li>
+                            <li><i class="fas fa-check"></i> Design precision</li>
+                        </ul>
+                    </div>
+                    <div class="alt-image">
+                        <img src="https://images.unsplash.com/photo-1592150621344-22d507119106?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Expert Team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proprietors Section -->
+    <section class="proprietors-section">
+        <div class="container">
+            <h5 class="about-subtitle" style="text-align: center;">Our Visionaries</h5>
+            <h2 class="section-title">Meet The Proprietors</h2>
+            
+            <div class="proprietors-grid">
+                <div class="proprietor-card animate-on-scroll">
+                    <div class="proprietor-img">
+                        <img src="https://via.placeholder.com/300?text=V.V.+Rao" alt="V.V. Rao">
+                    </div>
+                    <div class="proprietor-info">
+                        <h3>V.V. Rao</h3>
+                        <p>Co-Founder & Chief Horticulturist</p>
+                        <div class="proprietor-bio">
+                            With a deep-rooted passion for botany, V.V. Rao leads our plant quality and greenhouse operations with 15+ years of expertise.
                         </div>
-                        <div>
-                            <h3 style="color: var(--primary-color); font-size: 2rem;">500+</h3>
-                            <p style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Plant Species</p>
+                    </div>
+                </div>
+                <div class="proprietor-card animate-on-scroll">
+                    <div class="proprietor-img">
+                        <img src="https://via.placeholder.com/300?text=V.T.+Srinivasu" alt="V.T. Srinivasu">
+                    </div>
+                    <div class="proprietor-info">
+                        <h3>V.T. Srinivasu</h3>
+                        <p>Co-Founder & Project Director</p>
+                        <div class="proprietor-bio">
+                            V.T. Srinivasu oversees our large-scale landscaping projects, ensuring every garden transformation is a masterpiece of design.
                         </div>
                     </div>
                 </div>
@@ -105,146 +410,118 @@
         </div>
     </section>
 
-    <!-- Category Grid -->
-    <section class="categories section-padding">
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 50px;">
-                <h5 class="text-primary" style="text-transform: uppercase; letter-spacing: 2px;">What we offer</h5>
-                <h2 style="font-size: 2.5rem;">Explore Our Collections</h2>
-            </div>
-            <div class="grid">
-                <a href="gallery.html?cat=indoor" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Indoor Plants</h3>
-                    <p>Beautiful air-purifying plants for your home.</p>
-                </a>
-                <a href="gallery.html?cat=bonsai" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-tree"></i></div>
-                    <h3>Exquisite Bonsai</h3>
-                    <p>Miniature masterpieces for your desk or garden.</p>
-                </a>
-                <a href="gallery.html?cat=fruit" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-apple-alt"></i></div>
-                    <h3>Fruit Plants</h3>
-                    <p>High-yield hybrid fruit tree saplings.</p>
-                </a>
-                <a href="gallery.html?cat=shrubs" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-seedling"></i></div>
-                    <h3>Shrubs</h3>
-                    <p>Versatile shrubs for landscape borders.</p>
-                </a>
-                <a href="gallery.html?cat=palm" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-palmtree"></i></div>
-                    <h3>Palm Trees</h3>
-                    <p>Majestic palms for an instant tropical feel.</p>
-                </a>
-                <a href="gallery.html?cat=avenue" class="category-item animate-on-scroll">
-                    <div class="category-icon"><i class="fas fa-road"></i></div>
-                    <h3>Avenue Plants</h3>
-                    <p>Shady trees perfect for roads and large estates.</p>
-                </a>
+            <h5 class="about-subtitle" style="text-align: center;">Testimonials</h5>
+            <h2 class="section-title">What Our Clients Say</h2>
+            
+            <div class="reviews-carousel">
+                <div class="review-card glass-card animate-on-scroll">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Trinetra Nursery transformed our villa's backyard into a tropical paradise. Their plant quality is unmatched in Andhra Pradesh."</p>
+                    <div class="reviewer">
+                        <img src="https://via.placeholder.com/60?text=RK" alt="Rajesh Kumar">
+                        <div class="reviewer-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>Villa Owner, Kakinada</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- More reviews will be added in script.js for carousel -->
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="services section-padding" style="background-color: var(--bg-surface);">
+
+    <!-- Visit Our Nursery Section -->
+    <section class="visit-nursery">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <h5 class="text-primary" style="text-transform: uppercase; letter-spacing: 2px;">Our Expertise</h5>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Professional Landscaping & Supply</h2>
-                    <p style="margin-bottom: 20px; color: var(--text-muted);">We specialize in large-scale landscaping projects, from corporate offices to private estates. Our team ensures that every plant is handled with the utmost care from our nursery to your location.</p>
-                    <ul style="list-style: none; margin-bottom: 40px;">
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle text-primary"></i> Nationwide Plant Transportation</li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle text-primary"></i> Professional Planting Services</li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle text-primary"></i> Wholesale & Retail Supply</li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle text-primary"></i> 24/7 Expert Consultation</li>
-                    </ul>
-                    <a href="services.html" class="btn btn-primary">Learn More About Services</a>
-                </div>
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Service 1" style="width: 100%; height: 250px; object-fit: cover;">
-                    <img src="https://images.unsplash.com/photo-1592150621344-22d507119106?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Service 2" style="width: 100%; height: 250px; object-fit: cover; margin-top: 40px;">
+            <h5 class="about-subtitle" style="text-align: center;">Location</h5>
+            <h2 class="section-title">Visit Our Nursery</h2>
+            
+            <div class="map-container glass-card animate-on-scroll">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15264.444212513417!2d81.828551!3d16.920556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU1JzE0LjAiTiA4McKwNDknNDIuOCJF!5e0!3m2!1sen!2sin!4v1622549234567!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="address-card glass-card">
+                    <h3>Trinetra Nursery</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Near GNR Function Hall,<br>Veeravaram Road, Kadiam</p>
+                    <p><i class="fas fa-clock"></i> Open 24/7</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 86886 44443</p>
+                    <a href="https://goo.gl/maps/example" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center;">Get Directions</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Form Section -->
-    <section id="order" class="order-form section-padding">
-        <div class="container" style="max-width: 800px;">
-            <div style="background: white; padding: 60px; border: 1px solid var(--border-color);">
-                <h2 class="text-center" style="margin-bottom: 40px;">Request a Quote</h2>
-                <form id="plantOrderForm">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                        <input type="text" placeholder="Your Name" required style="width: 100%; padding: 15px; border: 1px solid var(--border-color); outline: none;">
-                        <input type="tel" placeholder="Phone Number" required style="width: 100%; padding: 15px; border: 1px solid var(--border-color); outline: none;">
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                        <select style="width: 100%; padding: 15px; border: 1px solid var(--border-color); background: white; outline: none;">
-                            <option value="">Select Category</option>
-                            <option value="indoor">Indoor Plants</option>
-                            <option value="fruit">Fruit Plants</option>
-                            <option value="shrubs">Shrubs</option>
-                            <option value="bonsai">Bonsai</option>
-                            <option value="palm">Palm Trees</option>
-                            <option value="landscaping">Landscaping Service</option>
-                        </select>
-                        <input type="number" placeholder="Quantity" style="width: 100%; padding: 15px; border: 1px solid var(--border-color); outline: none;">
-                    </div>
-                    <textarea placeholder="Tell us more about your requirement..." rows="4" style="width: 100%; padding: 15px; border: 1px solid var(--border-color); margin-bottom: 30px; outline: none;"></textarea>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">Submit Request</button>
-                </form>
+    <!-- Call to Action Section -->
+    <section class="final-cta">
+        <div class="container cta-banner animate-on-scroll">
+            <h2>Looking for the Best Plants at Wholesale Prices?</h2>
+            <p>Whether you need a single plant or a full landscape transformation, we're here to help.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn btn-primary-white">Get a Quote</a>
+                <a href="https://wa.me/918688644443" class="btn btn-outline-white">WhatsApp Inquiry</a>
             </div>
         </div>
     </section>
-
-    <!-- WhatsApp Redirect -->
-    <a href="https://wa.me/919492666767" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h2 style="color: var(--white); margin-bottom: 25px;">TRINETRA NURSERY</h2>
-                    <p style="color: #adb5bd; font-size: 0.9rem; line-height: 1.8;">One of the premier destinations for quality plants and professional landscaping services in Kadiyam road. We bring nature to your doorstep.</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Collections</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Collections</h3>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                        <li><a href="gallery.html?cat=bonsai">Bonsai Collection</a></li>
-                        <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                        <li><a href="gallery.html?cat=shrubs">Shrubs & Creepers</a></li>
-                        <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📍 Kadiyam Road, East Godavari, AP</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📞 +91 94926 66767</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">✉️ info@trinetranursery.com</p>
+    <footer class="premium-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="https://via.placeholder.com/180x60?text=TRINETRA" alt="Trinetra Nursery" class="footer-logo">
+                <p>Premium plants and landscaping expertise since 1998. We transform spaces with nature's artistry.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Standard Industrial Design</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Landscaping</a></li>
+                    <li><a href="gallery.html">Plant Selling</a></li>
+                    <li><a href="services.html">Gardening</a></li>
+                    <li><a href="services.html">Irrigation</a></li>
+                    <li><a href="services.html">Renovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone-alt"></i> 8688644443</li>
+                    <li><i class="fas fa-phone-alt"></i> 9133342334</li>
+                    <li><i class="fas fa-envelope"></i> trinetranursery@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Near GNR Function Hall, Veeravaram Road, Kadiam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Designed for Excellence</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/918688644443" class="fab-btn whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8688644443" class="fab-btn call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://goo.gl/maps/example" class="fab-btn map" title="Directions"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
 
     <script src="script.js"></script>
 </body>

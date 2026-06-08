@@ -8,61 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +91 94926 66767</span>
-                <span><i class="fas fa-envelope"></i> info@trinetranursery.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Kadiyam Road, AP</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">TRINETRA NURSERY</a>
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/150x50?text=TRINETRA" alt="Trinetra Nursery" class="logo-img">
+            </a>
+            
+            <nav class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/918688644443" class="btn btn-primary whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="gallery.html">Collections <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                            <li><a href="gallery.html?cat=bonsai">Bonsai</a></li>
-                            <li><a href="gallery.html?cat=shrubs">Shrubs</a></li>
-                            <li><a href="gallery.html?cat=creepers">Creepers</a></li>
-                            <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                            <li><a href="gallery.html?cat=flower">Flower Plants</a></li>
-                            <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                            <li><a href="gallery.html?cat=avenue">Avenue Plants</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="index.html#order" class="btn btn-primary" style="padding: 8px 16px;">Get a Quote</a></li>
-                </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="section-padding" style="background-color: var(--primary-dark); color: white; text-align: center;">
-        <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 10px;">Our Services</h1>
-            <p style="opacity: 0.8; font-size: 1.1rem;">Professional horticulture and landscaping solutions.</p>
+    <section class="page-header">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1558905612-25f00e00f913?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Services Header">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-wrapper">
+            <h1 class="hero-headline">Our Services</h1>
+            <p class="hero-description">Professional horticulture and landscaping solutions tailored to your vision.</p>
         </div>
     </section>
 
@@ -71,87 +57,130 @@
         <div class="container">
             <div class="grid">
                 <div class="card animate-on-scroll">
-                    <div class="card-img" style="height: 300px;">
+                    <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1558905619-1714249a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Landscaping">
                     </div>
                     <div class="card-body">
-                        <h5 class="text-primary" style="text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px;">Specialization</h5>
-                        <h2 style="font-size: 1.5rem;">Landscaping Design</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">We design and execute world-class landscapes for residential and commercial spaces. Our team works from concept to completion.</p>
-                        <a href="index.html#order" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Expertise</h5>
+                        <h3>Landscaping Design</h3>
+                        <p class="about-text">We design and execute world-class landscapes for residential and commercial spaces. Our team works from concept to completion, ensuring every detail aligns with your vision.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
                     </div>
                 </div>
                 <div class="card animate-on-scroll">
-                    <div class="card-img" style="height: 300px;">
+                    <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1592150621344-22d507119106?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Maintenance">
                     </div>
                     <div class="card-body">
-                        <h5 class="text-primary" style="text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px;">Maintenance</h5>
-                        <h2 style="font-size: 1.5rem;">Garden Maintenance</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Professional care for your gardens, including pruning, fertilization, and pest control to keep your greenery healthy year-round.</p>
-                        <a href="index.html#order" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Maintenance</h5>
+                        <h3>Garden Maintenance</h3>
+                        <p class="about-text">Professional care for your gardens, including pruning, fertilization, and pest control to keep your greenery healthy and vibrant throughout the year.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
                     </div>
                 </div>
                 <div class="card animate-on-scroll">
-                    <div class="card-img" style="height: 300px;">
+                    <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Supply">
                     </div>
                     <div class="card-body">
-                        <h5 class="text-primary" style="text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px;">Supply</h5>
-                        <h2 style="font-size: 1.5rem;">Wholesale Plant Supply</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 20px;">Bulk supply of plants for enterprises, real estate developers, and government projects across the country.</p>
-                        <a href="index.html#order" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Supply</h5>
+                        <h3>Bulk Plant Supply</h3>
+                        <p class="about-text">We provide wholesale plant supply for large-scale landscaping projects, real estate developments, and corporate parks across the country.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Irrigation">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Technology</h5>
+                        <h3>Smart Irrigation</h3>
+                        <p class="about-text">Efficient water management systems including drip and sprinkler irrigation tailored to the specific needs of your garden or landscape.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Renovation">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Transformation</h5>
+                        <h3>Garden Renovation</h3>
+                        <p class="about-text">Breathe new life into your existing outdoor spaces with our renovation services. We upgrade old gardens with modern designs and healthy plants.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="card animate-on-scroll">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1416870230247-3b4a33cea0e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Consultation">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="about-subtitle" style="font-size: 0.8rem; margin-bottom: 10px;">Guidance</h5>
+                        <h3>Expert Consultation</h3>
+                        <p class="about-text">Get professional advice on plant selection, soil quality, and garden design from our senior horticulturists with decades of experience.</p>
+                        <a href="https://wa.me/918688644443" class="btn btn-outline" style="width: 100%; text-align: center;">Enquire Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Redirect -->
-    <a href="https://wa.me/919492666767" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h2 style="color: var(--white); margin-bottom: 25px;">TRINETRA NURSERY</h2>
-                    <p style="color: #adb5bd; font-size: 0.9rem; line-height: 1.8;">One of the premier destinations for quality plants and professional landscaping services in Kadiyam road. We bring nature to your doorstep.</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Collections</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Collections</h3>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                        <li><a href="gallery.html?cat=bonsai">Bonsai Collection</a></li>
-                        <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                        <li><a href="gallery.html?cat=shrubs">Shrubs & Creepers</a></li>
-                        <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📍 Kadiyam Road, East Godavari, AP</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📞 +91 94926 66767</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">✉️ info@trinetranursery.com</p>
+    <footer class="premium-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="https://via.placeholder.com/180x60?text=TRINETRA" alt="Trinetra Nursery" class="footer-logo">
+                <p>Premium plants and landscaping expertise since 1998. We transform spaces with nature's artistry.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Standard Industrial Design</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Landscaping</a></li>
+                    <li><a href="gallery.html">Plant Selling</a></li>
+                    <li><a href="services.html">Gardening</a></li>
+                    <li><a href="services.html">Irrigation</a></li>
+                    <li><a href="services.html">Renovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone-alt"></i> 8688644443</li>
+                    <li><i class="fas fa-phone-alt"></i> 9133342334</li>
+                    <li><i class="fas fa-envelope"></i> trinetranursery@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Near GNR Function Hall, Veeravaram Road, Kadiam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Designed for Excellence</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/918688644443" class="fab-btn whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8688644443" class="fab-btn call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://goo.gl/maps/example" class="fab-btn map" title="Directions"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
 
     <script src="script.js"></script>
 </body>

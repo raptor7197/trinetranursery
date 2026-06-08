@@ -8,137 +8,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +91 94926 66767</span>
-                <span><i class="fas fa-envelope"></i> info@trinetranursery.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Kadiyam Road, AP</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">TRINETRA NURSERY</a>
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/150x50?text=TRINETRA" alt="Trinetra Nursery" class="logo-img">
+            </a>
+            
+            <nav class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/918688644443" class="btn btn-primary whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li class="dropdown">
-                        <a href="gallery.html">Collections <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                            <li><a href="gallery.html?cat=bonsai">Bonsai</a></li>
-                            <li><a href="gallery.html?cat=shrubs">Shrubs</a></li>
-                            <li><a href="gallery.html?cat=creepers">Creepers</a></li>
-                            <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                            <li><a href="gallery.html?cat=flower">Flower Plants</a></li>
-                            <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                            <li><a href="gallery.html?cat=avenue">Avenue Plants</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="index.html#order" class="btn btn-primary" style="padding: 8px 16px;">Get a Quote</a></li>
-                </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="section-padding" style="background-color: var(--primary-dark); color: white; text-align: center;">
-        <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 10px;">About Trinetra Nursery</h1>
-            <p style="opacity: 0.8; font-size: 1.1rem;">A Legacy of Greenery and Professional Care</p>
+    <section class="page-header">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="About Header">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-wrapper">
+            <h1 class="hero-headline">About Trinetra Nursery</h1>
+            <p class="hero-description">A Legacy of Greenery and Professional Care since 1998.</p>
         </div>
     </section>
 
     <!-- Story Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nursery Garden" style="width: 100%; height: 500px; object-fit: cover; border: 10px solid var(--bg-surface);">
+    <section class="about-premium">
+        <div class="container about-wrapper">
+            <div class="about-image-wrapper animate-on-scroll">
+                <div class="about-main-image">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nursery Garden">
                 </div>
-                <div>
-                    <h5 class="text-primary" style="text-transform: uppercase; letter-spacing: 2px;">Our Story</h5>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Founded on Quality, Grown with Passion</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">Trinetra Nursery is one of the premier destinations in the Kadiyam region, celebrated for its top-notch quality and service. Established with a vision to provide the best plant species and landscaping expertise, we have grown from a small plot to a multi-acre facility.</p>
-                    <p style="color: var(--text-muted); margin-bottom: 30px;">We specialize in a vast variety of plants, from indoor beauties to exotic outdoor collections. Our team of experienced horticulturists is dedicated to ensuring that every plant you receive is healthy, vibrant, and ready to thrive.</p>
+                <div class="about-shape"></div>
+            </div>
+            <div class="about-content animate-on-scroll">
+                <h5 class="about-subtitle">Our Story</h5>
+                <h2 class="about-title">Founded on Quality, Grown with Passion</h2>
+                <p class="about-text">Trinetra Nursery is one of the premier destinations in the Kadiyam region, celebrated for its top-notch quality and service. Established with a vision to provide the best plant species and landscaping expertise, we have grown from a small plot to a multi-acre facility.</p>
+                <p class="about-text">We specialize in a vast variety of plants, from indoor beauties to exotic outdoor collections. Our team of experienced horticulturists is dedicated to ensuring that every plant you receive is healthy, vibrant, and ready to thrive.</p>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div style="padding: 20px; background: var(--bg-surface);">
-                            <h4 class="text-primary">20+ Years</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Of horticultural excellence and customer satisfaction.</p>
-                        </div>
-                        <div style="padding: 20px; background: var(--bg-surface);">
-                            <h4 class="text-primary">1500+</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Different varieties of plants available in our nursery.</p>
-                        </div>
+                <div class="about-features">
+                    <div class="feature-badge">
+                        <i class="fas fa-check"></i>
+                        <span>20+ Years Experience</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-check"></i>
+                        <span>1500+ Plant Varieties</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Redirect -->
-    <a href="https://wa.me/919492666767" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h2 style="color: var(--white); margin-bottom: 25px;">TRINETRA NURSERY</h2>
-                    <p style="color: #adb5bd; font-size: 0.9rem; line-height: 1.8;">One of the premier destinations for quality plants and professional landscaping services in Kadiyam road. We bring nature to your doorstep.</p>
-                </div>
-                <div>
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Collections</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Collections</h3>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html?cat=indoor">Indoor Plants</a></li>
-                        <li><a href="gallery.html?cat=bonsai">Bonsai Collection</a></li>
-                        <li><a href="gallery.html?cat=fruit">Fruit Plants</a></li>
-                        <li><a href="gallery.html?cat=shrubs">Shrubs & Creepers</a></li>
-                        <li><a href="gallery.html?cat=palm">Palm Trees</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📍 Kadiyam Road, East Godavari, AP</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">📞 +91 94926 66767</p>
-                    <p style="color: #adb5bd; font-size: 0.85rem; margin-bottom: 10px;">✉️ info@trinetranursery.com</p>
+    <footer class="premium-footer">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <img src="https://via.placeholder.com/180x60?text=TRINETRA" alt="Trinetra Nursery" class="footer-logo">
+                <p>Premium plants and landscaping expertise since 1998. We transform spaces with nature's artistry.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Standard Industrial Design</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Plants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Landscaping</a></li>
+                    <li><a href="gallery.html">Plant Selling</a></li>
+                    <li><a href="services.html">Gardening</a></li>
+                    <li><a href="services.html">Irrigation</a></li>
+                    <li><a href="services.html">Renovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-details">
+                    <li><i class="fas fa-phone-alt"></i> 8688644443</li>
+                    <li><i class="fas fa-phone-alt"></i> 9133342334</li>
+                    <li><i class="fas fa-envelope"></i> trinetranursery@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Near GNR Function Hall, Veeravaram Road, Kadiam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Trinetra Nursery. All Rights Reserved. | Designed for Excellence</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/918688644443" class="fab-btn whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8688644443" class="fab-btn call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://goo.gl/maps/example" class="fab-btn map" title="Directions"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
 
     <script src="script.js"></script>
 </body>
