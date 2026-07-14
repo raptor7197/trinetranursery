@@ -18,7 +18,6 @@ A premium nursery and landscaping brand website for Trinetra Nursery, featuring 
   - Headings: 'Playfair Display', serif
   - Body: 'Inter', sans-serif
 
-## Core Sections
 - **Hero:** Full-viewport cinematic experience with floating collage.
 - **Trust Metrics:** Animated counters for projects and experience.
 - **Services:** Premium cards for landscaping, plant selling, and garden solutions.
