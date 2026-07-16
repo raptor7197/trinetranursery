@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flower Plants — Trinetra Nursery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{margin:0;padding:0;min-height:100vh}
+  img{display:block}
+  ::selection{background:#C6F25C;color:#0E2A1E}
+  @keyframes tnBlob{0%,100%{border-radius:42% 58% 63% 37%/41% 44% 56% 59%}33%{border-radius:62% 38% 34% 66%/56% 62% 38% 44%}66%{border-radius:38% 62% 58% 42%/48% 36% 64% 52%}}
+  @keyframes tnBlobB{0%,100%{border-radius:58% 42% 38% 62%/52% 56% 44% 48%}50%{border-radius:40% 60% 64% 36%/62% 40% 60% 38%}}
+  @keyframes tnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
+  @keyframes tnFloatB{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+  @keyframes tnFadeInUp{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes tnFadeInLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
+  @keyframes tnFadeInRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  :root{--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12)}
+</style>
+</head>
+<body>
+<div style="background:var(--pine);color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;min-height:100vh;position:relative;overflow:hidden">
+
+<div style="position:absolute;top:-120px;left:-80px;width:500px;height:500px;background:radial-gradient(circle at 35% 35%,#1f9d55,transparent 70%);filter:blur(50px);opacity:.5;z-index:0;animation:tnBlob 18s ease-in-out infinite,tnFloat 12s ease-in-out infinite"></div>
+<div style="position:absolute;bottom:-100px;right:-60px;width:400px;height:400px;background:radial-gradient(circle at 50% 50%,#bdeccd,transparent 65%);filter:blur(44px);opacity:.35;z-index:0;animation:tnBlobB 15s ease-in-out infinite,tnFloatB 10s ease-in-out infinite"></div>
+
+<div id="tn-progress" style="position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--grn),var(--lime));z-index:100;transition:width .12s linear"></div>
+
+<div id="tn-nav" style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .4s ease,box-shadow .4s ease">
+  <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none">
+    <img src="assets/logo-icon.png" alt="Trinetra Nursery" style="height:42px;width:auto;display:block;filter:brightness(0) invert(1)">
+    <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#fff;letter-spacing:-.02em">trinetra</span>
+  </a>
+  <div style="display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600">
+    <a href="index.html" style="color:var(--lime);cursor:pointer;transition:color .25s ease;text-decoration:none">Home</a>
+    <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 24px rgba(31,157,85,.32)'" onmouseout="this.style.transform='';this.style.boxShadow=''">WhatsApp us</a>
+  </div>
+</div>
+
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 200px);padding:48px 56px;text-align:center">
+  <div style="animation:tnFadeInUp .7s ease both">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);color:var(--lime);font-size:12px;font-weight:700;letter-spacing:.06em;padding:8px 16px;border-radius:100px;text-transform:uppercase;border:1px solid rgba(198,242,92,.25)">Our greenhouse</div>
+    <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:64px;line-height:.99;letter-spacing:-.03em;color:#fff;margin:22px 0 0">Flower Plants</h1>
+    <p style="font-size:20px;font-weight:600;color:var(--lime);margin:12px 0 0">100+ Varieties</p>
+  </div>
+  <div style="max-width:640px;margin:32px auto 0;animation:tnFadeInUp .8s .2s ease both">
+    <p style="font-size:17px;line-height:1.7;color:#cfe0cf">Trinetra Nursery offers one of the largest collections of flowering plants in Andhra Pradesh. From vibrant seasonal blooms to perennial favorites, our nursery is home to over 100 varieties of flower plants — including roses, marigolds, jasmine, hibiscus, adenium, bougainvillea, crossandra, and many more. Each plant is nurtured with organic care in our Kadiyam greenhouse, ensuring healthy roots, strong growth, and abundant flowering. Whether you're looking to brighten your home garden, create a commercial flower bed, or source wholesale quantities for landscaping projects, we have the right varieties for every season and purpose. Our team provides expert advice on plant selection, soil preparation, and bloom cycles so you get the best results. Visit our nursery to explore the blooms in person, or place an order for pan-India delivery — carefully packed and dispatched fresh.</p>
+  </div>
+  <div style="margin-top:40px;animation:tnFadeInUp .8s .35s ease both">
+    <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20flower%20plants." style="display:inline-block;background:var(--lime);color:var(--pine);font-size:15px;font-weight:700;padding:16px 36px;border-radius:100px;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 30px rgba(198,242,92,.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Enquire on WhatsApp →</a>
+  </div>
+</div>
+
+<div style="background:rgba(14,42,30,.6);color:#cfe0cf;padding:80px 56px 40px;position:relative">
+  <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1">
+    <div style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)">
+      <div style="max-width:300px">
+        <div style="display:flex;align-items:center;gap:11px">
+          <img src="assets/logo-icon.png" alt="Trinetra Nursery" style="height:46px;width:auto;display:block;filter:brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,.3))">
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;color:#fff">trinetra</span>
+        </div>
+        <p style="font-family:'Spectral',serif;font-size:16px;line-height:1.6;margin:18px 0 0;color:#9fb8a2">Premium plants and landscaping expertise since 1998. We transform spaces with nature's artistry.</p>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Visit us</div>
+        <div style="font-family:'Marcellus',serif;font-size:20px;color:#fff;line-height:1.3">Near GNR Function Hall,<br>Veeravaram Road, Kadiam</div>
+        <div style="font-size:14px;color:#9fb8a2;margin-top:10px">Open 24/7</div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:16px">
+          <a href="tel:+918688644443" style="color:#fff;text-decoration:none;font-weight:600">+91 86886 44443</a>
+          <a href="tel:+919133342334" style="color:#fff;text-decoration:none;font-weight:600">+91 91333 42334</a>
+          <a href="mailto:trinetranursery@gmail.com" style="color:#cfe0cf;text-decoration:none">trinetranursery@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#cfe0cf">
+          <a href="index.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Home</a>
+          <a href="indoor.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Indoor Plants</a>
+          <a href="flower.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Flower Plants</a>
+          <a href="fruit.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Fruit Plants</a>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:24px;font-size:13px;color:#7e9683">© 2024 Trinetra Nursery. All rights reserved.</div>
+  </div>
+</div>
+
+</div>
+<script>
+(function(){
+  var prog=document.getElementById('tn-progress'),h,onP=function(){
+    h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(Math.max(0,Math.min(1,(window.scrollY||window.pageYOffset||0)/(h||1)))*100)+'%';
+  };
+  window.addEventListener('scroll',onP,{passive:true});window.addEventListener('resize',onP,{passive:true});onP();
+  var nav=document.getElementById('tn-nav'),onS=function(){
+    var y=window.scrollY||document.documentElement.scrollTop||0;
+    if(y>40){nav.style.background='rgba(14,42,30,.88)';nav.style.backdropFilter='blur(12px)';nav.style.webkitBackdropFilter='blur(12px)';nav.style.boxShadow='0 1px 0 rgba(255,255,255,.08)'}
+    else{nav.style.background='transparent';nav.style.backdropFilter='none';nav.style.webkitBackdropFilter='none';nav.style.boxShadow='none'}
+  };
+  window.addEventListener('scroll',onS,{passive:true});onS();
+})();
+</script>
+</body>
+</html>
