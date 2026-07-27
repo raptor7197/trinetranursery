@@ -26,7 +26,11 @@
   @keyframes tnFadeInRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
   @keyframes tnScaleIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
   @keyframes tnSpin{to{transform:rotate(360deg)}}
-  @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+    @keyframes tnPulse{0%{box-shadow:0 0 0 0 rgba(198,242,92,.55)}70%{box-shadow:0 0 0 14px rgba(198,242,92,0)}100%{box-shadow:0 0 0 0 rgba(198,242,92,0)}}
+    @keyframes tnFloatPin{0%,100%{transform:translateY(0) rotate(-12deg)}50%{transform:translateY(-10px) rotate(-12deg)}}
+    @keyframes tnPing{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2.4);opacity:0}}
+    @keyframes tnReveal{from{opacity:0;transform:translateY(40px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
   .tn-plant-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   @media (max-width:900px){.tn-plant-grid{grid-template-columns:repeat(3,1fr)}}
   @media (max-width:640px){.tn-plant-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
@@ -78,8 +82,10 @@
     .tn-svc-list>div>div:first-child img{height:100%!important}
     .tn-svc-list>div>div:nth-child(2){font-size:24px!important;width:100%!important}
     .tn-svc-list>div>div:nth-child(3){font-size:14px!important}
-    #plants{padding:60px 20px!important}
-    #plants h2 span{font-size:clamp(24px,5vw,36px)!important}
+    #location{padding:60px 20px!important}
+        .tn-loc-wrap{grid-template-columns:1fr!important}
+        .tn-loc-map{height:380px!important}
+        .tn-loc-info{padding:24px!important}
     .tn-plant-grid{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
     .tn-wrk-sec{padding:60px 20px!important}
     .tn-wrk-sec h2{font-size:36px!important}
@@ -137,8 +143,10 @@
     #services{padding:48px 14px!important}
     #services .tn-svc-title{font-size:30px!important}
     #services #tn-svc-list>div:first-child{left:-12px!important}
-    #plants{padding:48px 14px!important}
-    #plants h2 span{font-size:clamp(22px,7vw,32px)!important}
+    #location{padding:48px 14px!important}
+        .tn-loc-wrap{gap:14px!important}
+        .tn-loc-map{height:320px!important}
+        .tn-loc-info{padding:22px!important;gap:18px!important}
     .tn-plant-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px!important}
     .tn-plant-grid>div{padding:16px 6px!important}
     .tn-plant-grid>div div:first-child{font-size:12px!important}
@@ -212,6 +220,7 @@
       <span data-scroll="plants" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Plants</span>
       <span data-scroll="vip" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">VIP Gallery</span>
       <span data-scroll="contact" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Contact</span>
+            <span data-scroll="location" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Location</span>
       <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." class="tn-nav-btn" onclick="tnCloseMenu()" style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,157,85,.32)">WhatsApp us</a>
     </div>
   </div>
@@ -475,7 +484,63 @@
     </div>
   </div>
 
-  <div id="contact" class="tn-foot-sec" style="background:var(--pine);color:#cfe0cf;padding:80px 56px 40px;position:relative;overflow:hidden">
+  <!-- ===== LOCATION ===== -->
+    <div id="location" style="background:var(--pine);padding:104px 56px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-120px;left:-80px;width:380px;height:380px;background:radial-gradient(circle,#1f9d55,transparent 70%);filter:blur(30px);opacity:.55"></div>
+      <div style="position:absolute;bottom:-140px;right:-60px;width:340px;height:340px;background:radial-gradient(circle,#9fd83f,transparent 70%);filter:blur(34px);opacity:.35"></div>
+
+      <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1">
+        <div data-reveal="up" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:42px;flex-wrap:wrap;gap:20px">
+          <div>
+            <div style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);font-weight:700">Find us</div>
+            <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:52px;letter-spacing:-.025em;color:#fff;margin:14px 0 0">Visit our nursery</h2>
+            <p style="font-size:16px;color:#9fb8a2;margin:14px 0 0;max-width:520px;line-height:1.6">Drop by our greenhouses near GNR Function Hall to explore plants in person. We&rsquo;re open 24/7 and always happy to help you pick the perfect plant.</p>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Trinetra+Nursery,+Kadiyam,+Andhra+Pradesh" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--pine);font-size:15px;font-weight:700;padding:16px 28px;border-radius:100px;text-decoration:none;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease" style-hover="transform:translateY(-3px);box-shadow:0 14px 30px rgba(198,242,92,.35)">
+            <span>Get directions</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+
+        <div class="tn-loc-wrap" style="display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:stretch">
+          <div class="tn-loc-map" data-reveal="up" data-reveal-delay="120" style="position:relative;height:520px;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08);background:#0a1a12">
+            <iframe src="https://www.google.com/maps?q=Trinetra+Nursery,+Kadiyam,+Andhra+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0;width:100%;height:100%;filter:saturate(.85) contrast(1.05);display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Trinetra Nursery location on Google Maps"></iframe>
+            <div aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);pointer-events:none">
+              <div style="position:relative;width:34px;height:34px">
+                <div style="position:absolute;inset:0;border-radius:50%;background:rgba(198,242,92,.4);animation:tnPing 2.2s ease-out infinite"></div>
+                <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;background:var(--lime);border:3px solid var(--pine);border-radius:50%;box-shadow:0 6px 14px rgba(0,0,0,.5);animation:tnPulse 2.4s ease-out infinite"></div>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Trinetra+Nursery,+Kadiyam,+Andhra+Pradesh" target="_blank" rel="noopener" class="tn-loc-open" style="position:absolute;top:18px;left:18px;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--pine);font-size:13px;font-weight:700;padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.28);transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.4)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M14 10l6.5-6.5M9 21H3v-6M10 14l-6.5 6.5"/></svg>
+              <span>Open in Maps</span>
+            </a>
+          </div>
+
+          <div class="tn-loc-info" data-reveal="right" data-reveal-delay="180" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:34px;display:flex;flex-direction:column;gap:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
+            <div>
+              <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:12px">Address</div>
+              <div style="font-family:'Marcellus',serif;font-size:22px;color:#fff;line-height:1.35">Near GNR Function Hall,<br>Veeravaram Road, Kadiam</div>
+              <div style="font-size:14px;color:#9fb8a2;margin-top:10px">Andhra Pradesh, India</div>
+            </div>
+            <div style="height:1px;background:rgba(255,255,255,.1)"></div>
+            <div>
+              <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:12px">Hours</div>
+              <div style="font-family:'Marcellus',serif;font-size:20px;color:#fff">Open 24/7</div>
+              <div style="font-size:13px;color:#9fb8a2;margin-top:6px">We&rsquo;re always here when you need us.</div>
+            </div>
+            <div style="height:1px;background:rgba(255,255,255,.1)"></div>
+            <div>
+              <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:12px">Call us</div>
+              <a href="tel:+918688644443" style="font-family:'Marcellus',serif;font-size:20px;color:#fff;text-decoration:none;display:block;transition:color .25s ease" style-hover="color:var(--lime)">+91 86886 44443</a>
+              <a href="tel:+919133342334" style="font-family:'Marcellus',serif;font-size:20px;color:#fff;text-decoration:none;display:block;margin-top:4px;transition:color .25s ease" style-hover="color:var(--lime)">+91 91333 42334</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="tn-foot-sec" style="background:var(--pine);color:#cfe0cf;padding:80px 56px 40px;position:relative;overflow:hidden">
     <div style="position:absolute;bottom:-140px;left:10%;width:360px;height:360px;background:radial-gradient(circle,#1f9d55,transparent 70%);filter:blur(40px);opacity:.4;animation:tnBlobB 20s ease-in-out infinite"></div>
     <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1">
       <div class="tn-foot-inner" style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)">
@@ -502,7 +567,7 @@
         <div>
           <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Explore</div>
           <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#cfe0cf">
-            <span data-scroll="about" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">About us</span><span data-scroll="services" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Services</span><span data-scroll="plants" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Plants</span><span data-scroll="vip" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">VIP Gallery</span><span data-scroll="contact" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Contact</span>
+            <span data-scroll="about" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">About us</span><span data-scroll="services" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Services</span><span data-scroll="plants" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Plants</span><span data-scroll="vip" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">VIP Gallery</span><span data-scroll="location" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Location</span><span data-scroll="contact" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--lime)">Contact</span>
           </div>
         </div>
       </div>
