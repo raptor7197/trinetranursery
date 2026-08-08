@@ -1,0 +1,11 @@
+# Authorized Digital Sellers for Trinetra Nursery
+# https://trinetranursery.in/ads.txt
+# Updated: 2024-01-15
+
+# Google AdSense (replace with actual publisher ID when available)
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Future ad network partnerships can be added here
+# Format: domain.com, publisher_id, DIRECT/RESELLER, TAG_ID
+
+# Contact: trinetranursery@gmail.com for advertising inquiries

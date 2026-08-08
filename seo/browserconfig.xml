@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/assets/images/logo-icon.png"/>
+      <square150x150logo src="/assets/images/logo-icon.png"/>
+      <square310x310logo src="/assets/images/logo-full.png"/>
+      <wide310x150logo src="/assets/images/logo-full.png"/>
+      <TileColor>#0E2A1E</TileColor>
+    </tile>
+    <badge>
+      <polling-uri src="https://trinetranursery.in/notifications/badge.xml"/>
+      <frequency>1440</frequency>
+    </badge>
+    <notification>
+      <polling-uri src="https://trinetranursery.in/notifications/feed1.xml"/>
+      <polling-uri2 src="https://trinetranursery.in/notifications/feed2.xml"/>
+      <polling-uri3 src="https://trinetranursery.in/notifications/feed3.xml"/>
+      <polling-uri4 src="https://trinetranursery.in/notifications/feed4.xml"/>
+      <polling-uri5 src="https://trinetranursery.in/notifications/feed5.xml"/>
+      <frequency>1440</frequency>
+      <cycle>1</cycle>
+    </notification>
+  </msapplication>
+</browserconfig>

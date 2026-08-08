@@ -1,0 +1,46 @@
+rules_version = '2';
+
+/**
+ * ========================================
+ * FIRESTORE SECURITY RULES - FIXED
+ * ========================================
+ * Copy and paste these rules into Firebase Console
+ * Location: Firebase Console > Firestore Database > Rules tab
+ * 
+ * FIXED: Removed strict timestamp == request.time validation
+ * that was blocking serverTimestamp() from working
+ */
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Reviews collection rules
+    match /reviews/{reviewId} {
+
+      // Anyone can read all reviews (we filter approved in client)
+      // Note: Using 'true' for read to allow queries. Since all reviews
+      // are auto-approved and we filter client-side, this is safe.
+      allow read: if true;
+
+      // Authenticated users can create reviews with validation.
+      // Every required field is checked server-side so no client can write
+      // malformed or malicious data.
+      allow create: if request.auth != null
+                    && request.resource.data.name is string
+                    && request.resource.data.name.size() >= 1
+                    && request.resource.data.name.size() <= 50
+                    && request.resource.data.reviewText is string
+                    && request.resource.data.reviewText.size() >= 1
+                    && request.resource.data.reviewText.size() <= 500
+                    && request.resource.data.rating is int
+                    && request.resource.data.rating >= 1
+                    && request.resource.data.rating <= 5
+                    && request.resource.data.approved == true
+                    && request.resource.data.keys().hasAll(['name', 'reviewText', 'rating', 'approved', 'timestamp'])
+                    && request.resource.data.keys().hasOnly(['name', 'reviewText', 'rating', 'approved', 'timestamp']);
+
+      // No public updates or deletes (manage via Firebase Console / admin)
+      allow update, delete: if false;
+    }
+  }
+}

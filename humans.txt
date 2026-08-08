@@ -1,0 +1,51 @@
+# humanstxt.org
+
+/* TEAM */
+Business Name: Trinetra Nursery
+Location: Kadiyam, Rajahmundry, East Godavari, Andhra Pradesh, India
+Contact: trinetranursery@gmail.com
+Phone: +91 86886 44443, +91 91333 42334
+WhatsApp: +91 86886 44443
+
+/* FOUNDERS */
+Co-Founder: V.T. Srinivasu
+Role: Project Director & Co-Founder
+Email: trinetranursery@gmail.com
+
+Co-Founder: V.V. Rao
+Role: Chief Horticulturist & Co-Founder
+Email: trinetranursery@gmail.com
+
+/* SITE */
+Last update: 2024/01/15
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Static Site, Responsive Design
+Software: Custom Development
+Languages: English, Hindi, Telugu
+Doctype: HTML5
+IDE: VS Code, WebStorm
+
+/* THANKS */
+To all our customers since 1998
+To the Kadiyam nursery community
+To plant lovers across India
+To our dedicated team of horticulturists
+
+/* ABOUT */
+Trinetra Nursery has been serving as Kadiyam's premier plant nursery since 1998.
+We specialize in providing premium quality plants including:
+- Indoor & Outdoor Plants
+- Fruit Plants (Mango, Citrus, Fig, etc.)
+- Flower Plants (100+ varieties)
+- Avenue & Tall Trees
+- Bonsai & Gift Plants
+- Landscaping Services
+- Pan-India Delivery
+
+Location: Near GNR Function Hall, Veeravaram Road, Kadiam
+Hours: Open 24/7
+Delivery: Pan-India
+
+/* MISSION */
+"Your Plant Requirement, Our Responsibility"
+Bringing artistry to gardens across India with premium plants and expert landscaping.

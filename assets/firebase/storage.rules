@@ -1,0 +1,9 @@
+// ========================================
+// FIREBASE STORAGE RULES — NO LONGER USED
+// ========================================
+// This file is kept for reference only.
+// The review system has been refactored to work without Firebase Storage
+// to support the free Spark plan.
+//
+// Profile photos now use generated avatars with customer initials.
+// ========================================

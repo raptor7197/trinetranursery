@@ -1,4 +1,42 @@
+# Robots.txt for Trinetra Nursery - Kadiyam's Premier Plant Nursery
+# Website: https://trinetranursery.in
+
 User-agent: *
 Allow: /
+Allow: /assets/
+Disallow: /seo/
+Disallow: /scripts/
+Disallow: /components/
+Disallow: /docs/
+Disallow: /test-*.html
+Disallow: /diagnose-*.html
+Disallow: /*.txt$
+Disallow: /*.md$
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://trinetranursery.in/sitemap.xml
+Sitemap: https://trinetranursery.in/sitemap-images.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Social Media Bots (for Open Graph scraping)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /

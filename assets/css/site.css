@@ -1,0 +1,55 @@
+/* =====================================================
+   Trinetra Nursery — Shared Site Styles
+   Consolidated base reset, design tokens and animations
+   used by all static product category pages.
+
+   NOTE: Design tokens (--pine, --cream, …) are intentionally
+   NOT declared here — group A pages define them on :root
+   inline, group B pages scope them to their wrapper <div>.
+   ===================================================== */
+
+/* ===== BASE / RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;min-height:100vh}
+img{display:block}
+::selection{background:#C6F25C;color:#0E2A1E}
+
+/* ===== ANIMATIONS ===== */
+@keyframes tnBlob{
+  0%,100%{border-radius:42% 58% 63% 37%/41% 44% 56% 59%}
+  33%{border-radius:62% 38% 34% 66%/56% 62% 38% 44%}
+  66%{border-radius:38% 62% 58% 42%/48% 36% 64% 52%}
+}
+@keyframes tnBlobB{
+  0%,100%{border-radius:58% 42% 38% 62%/52% 56% 44% 48%}
+  50%{border-radius:40% 60% 64% 36%/62% 40% 60% 38%}
+}
+@keyframes tnFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-24px)}
+}
+@keyframes tnFloatB{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(18px)}
+}
+@keyframes tnFadeInUp{
+  from{opacity:0;transform:translateY(44px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes tnFadeInLeft{
+  from{opacity:0;transform:translateX(-50px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes tnFadeInRight{
+  from{opacity:0;transform:translateX(50px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes tnScaleIn{
+  from{opacity:0;transform:scale(.85)}
+  to{opacity:1;transform:scale(1)}
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important}
+}

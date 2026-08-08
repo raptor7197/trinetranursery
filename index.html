@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="assets/js/dc-runtime.js"></script>
 </head>
 <body>
 <x-dc>
@@ -11,179 +11,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  img{display:block}
-  ::selection{background:#C6F25C;color:#0E2A1E}
-  @keyframes tnBlob{0%,100%{border-radius:42% 58% 63% 37%/41% 44% 56% 59%}33%{border-radius:62% 38% 34% 66%/56% 62% 38% 44%}66%{border-radius:38% 62% 58% 42%/48% 36% 64% 52%}}
-  @keyframes tnBlobB{0%,100%{border-radius:58% 42% 38% 62%/52% 56% 44% 48%}50%{border-radius:40% 60% 64% 36%/62% 40% 60% 38%}}
-  @keyframes tnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
-  @keyframes tnFloatB{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
-  @keyframes tnMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  @keyframes tnFadeInUp{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes tnFadeInLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
-  @keyframes tnFadeInRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
-  @keyframes tnScaleIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
-  @keyframes tnSpin{to{transform:rotate(360deg)}}
-    @keyframes tnPulse{0%{box-shadow:0 0 0 0 rgba(198,242,92,.55)}70%{box-shadow:0 0 0 14px rgba(198,242,92,0)}100%{box-shadow:0 0 0 0 rgba(198,242,92,0)}}
-    @keyframes tnFloatPin{0%,100%{transform:translateY(0) rotate(-12deg)}50%{transform:translateY(-10px) rotate(-12deg)}}
-    @keyframes tnPing{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2.4);opacity:0}}
-    @keyframes tnReveal{from{opacity:0;transform:translateY(40px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
-    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
-  .tn-plant-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  @media (max-width:900px){.tn-plant-grid{grid-template-columns:repeat(3,1fr)}}
-  @media (max-width:640px){.tn-plant-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
-  @media (max-width:400px){.tn-plant-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
-  @media (max-width:768px){.tn-section{padding:64px 24px!important}}@media (max-width:480px){.tn-section{padding:48px 16px!important}}
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width:900px){
-    #tn-nav{padding:14px 24px!important}
-    #tn-nav .tn-nav-items{gap:12px!important}
-    #home{padding:20px 24px 60px!important}
-    .tn-hero{flex-direction:column!important;gap:36px!important}
-    .tn-hero h1{font-size:clamp(32px,6vw,52px)!important}
-    .tn-hero-img{max-width:460px!important;margin:0 auto!important}
-    .tn-rcol{flex-direction:column!important}
-    .tn-rgap{gap:24px!important}
-    .tn-rimg{width:100%!important;max-width:100%!important}
-    [data-reveal=left],[data-reveal=right]{animation-name:tnFadeInUp!important}
-  }
-  @media (max-width:768px){
-    #tn-nav{flex-wrap:wrap!important;padding:12px 20px!important}
-    #tn-nav .tn-hamburger{display:flex!important}
-    #tn-nav .tn-nav-items{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;flex-direction:column!important;background:#fff!important;padding:16px 20px!important;gap:14px!important;box-shadow:0 20px 40px rgba(0,0,0,.12)!important;border-top:1px solid var(--line)!important;z-index:60!important}
-    #tn-nav.tn-menu-open .tn-nav-items{display:flex!important}
-    #tn-nav .tn-nav-items>*{font-size:15px!important;padding:6px 0!important}
-    #tn-nav .tn-nav-items>.tn-nav-btn{margin-top:6px!important;text-align:center!important;padding:11px 22px!important}
-    #tn-nav .tn-nav-logo{font-size:22px!important}
-    #tn-nav img{height:36px!important}
-    #home{padding:18px 20px 48px!important}
-    .tn-hero h1{font-size:clamp(28px,5.5vw,42px)!important}
-    .tn-hero p{font-size:16px!important}
-    .tn-hero-img{max-width:380px!important}
-    .tn-about{padding:60px 20px!important}
-    .tn-about-inner{flex-direction:column!important;gap:32px!important}
-    .tn-about-inner>div:first-child{max-width:300px!important;margin:0 auto!important;width:100%!important}
-    .tn-about-inner>div:first-child>div{width:100%!important;height:320px!important}
-    .tn-about-inner h2{font-size:36px!important}
-    .tn-about-inner h2 br{display:none!important}
-    .tn-about-inner p{font-size:16px!important}
-    .tn-about-stats{flex-wrap:wrap!important}
-    .tn-about-stats>div{flex:1 1 45%!important;padding:14px 10px 0!important;border:0!important}
-    .tn-about-stats>div:last-child{border:0!important}
-    .tn-about-stats>div div:first-child{font-size:32px!important}
-    #services{padding:60px 20px!important}
-    #services .tn-svc-title{font-size:34px!important}
-    #services #tn-svc-list>div:first-child{left:-18px!important}
-    .tn-svc-list>div{flex-direction:column!important;align-items:flex-start!important;gap:8px!important;padding:20px 12px!important}
-    .tn-svc-list>div>div:first-child{width:100%!important;height:auto!important;aspect-ratio:4/1!important;border-radius:12px!important}
-    .tn-svc-list>div>div:first-child img{height:100%!important}
-    .tn-svc-list>div>div:nth-child(2){font-size:24px!important;width:100%!important}
-    .tn-svc-list>div>div:nth-child(3){font-size:14px!important}
-    #location{padding:60px 20px!important}
-        .tn-loc-wrap{grid-template-columns:1fr!important}
-        .tn-loc-map{height:380px!important}
-        .tn-loc-info{padding:24px!important}
-    .tn-plant-grid{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
-    .tn-wrk-sec{padding:60px 20px!important}
-    .tn-wrk-sec h2{font-size:36px!important}
-    .tn-wrk{grid-template-columns:repeat(2,1fr)!important;gap:16px!important}
-    .tn-wrk>div{height:260px!important}
-    .tn-why{flex-direction:column!important;gap:28px!important;margin-bottom:32px!important}
-    .tn-why>div:first-child{width:100%!important;height:240px!important;border-radius:14px!important}
-    .tn-why h3{font-size:26px!important}
-    .tn-why-rev{flex-direction:column!important;gap:28px!important}
-    .tn-why-rev>div:first-child{width:100%!important;height:240px!important;border-radius:14px!important}
-    .tn-prop-sec{padding:60px 20px!important}
-    .tn-prop-sec h2{font-size:36px!important}
-    .tn-prop-grid{gap:20px!important}
-    .tn-prop-grid>div{padding:28px!important}
-    .tn-vip-grid{gap:16px!important}
-    .tn-del-sec{padding:52px 20px!important}
-    .tn-del-sec h2{font-size:34px!important}
-    .tn-test-sec{padding:60px 20px!important}
-    .tn-test-sec p{font-size:22px!important}
-    .tn-cta-sec{padding:16px 20px 56px!important}
-    .tn-cta-inner{padding:40px 28px!important}
-    .tn-cta-sec h2{font-size:32px!important}
-    .tn-foot-sec{padding:56px 20px 32px!important}
-    .tn-foot-inner{gap:32px!important}
-  }
-  @media (max-width:640px){
-    #tn-nav{padding:10px 14px!important}
-    #tn-nav .tn-nav-items{padding:14px 16px!important;gap:12px!important}
-    #tn-nav .tn-nav-items>*{font-size:14px!important}
-    #tn-nav .tn-nav-items>.tn-nav-btn{padding:10px 20px!important;font-size:13px!important}
-    #tn-nav img{height:32px!important}
-    #tn-nav .tn-nav-logo{font-size:19px!important}
-    #home{padding:16px 14px 36px!important}
-    .tn-hero h1{font-size:clamp(24px,9vw,34px)!important}
-    .tn-hero p{font-size:15px!important;max-width:100%!important}
-    .tn-hero .tn-hero-badge{font-size:10px!important;padding:5px 11px!important}
-    .tn-hero .tn-hero-tagline span{font-size:17px!important}
-    .tn-hero .tn-hero-btns{flex-wrap:wrap!important}
-    .tn-hero .tn-hero-btns>*{font-size:13px!important;padding:12px 20px!important;text-align:center!important;flex:1!important;min-width:130px!important}
-    .tn-hero-img{display:none!important}
-    .tn-wrk{grid-template-columns:1fr!important;gap:14px!important}
-    .tn-wrk>div{height:230px!important}
-    .tn-prop-grid{grid-template-columns:1fr!important;gap:16px!important}
-    .tn-prop-grid>div{padding:22px!important;flex-direction:column!important;gap:14px!important}
-    .tn-prop-grid>div>div:first-child{width:80px!important;height:100px!important;font-size:26px!important}
-    .tn-prop-grid>div>div:last-child>div:first-child{font-size:22px!important}
-    .tn-vip-grid{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}
-    .tn-svc-list>div>div:nth-child(2){font-size:22px!important}
-    .tn-about{padding:56px 14px!important}
-    .tn-about-inner>div:first-child{max-width:260px!important}
-    .tn-about-inner>div:first-child>div{height:280px!important}
-    .tn-about-inner h2{font-size:32px!important}
-    .tn-about-inner p{font-size:15px!important}
-    .tn-about-stats>div div:first-child{font-size:28px!important}
-    #services{padding:48px 14px!important}
-    #services .tn-svc-title{font-size:30px!important}
-    #services #tn-svc-list>div:first-child{left:-12px!important}
-    #location{padding:48px 14px!important}
-        .tn-loc-wrap{gap:14px!important}
-        .tn-loc-map{height:320px!important}
-        .tn-loc-info{padding:22px!important;gap:18px!important}
-    .tn-plant-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px!important}
-    .tn-plant-grid>div{padding:16px 6px!important}
-    .tn-plant-grid>div div:first-child{font-size:12px!important}
-    .tn-plant-grid>div div:last-child{font-size:10px!important}
-    .tn-wrk-sec{padding:48px 14px!important}
-    .tn-wrk-sec h2{font-size:32px!important}
-    .tn-wrk>div{height:220px!important}
-    .tn-why>div:first-child{height:200px!important}
-    .tn-why h3{font-size:24px!important}
-    .tn-why-rev>div:first-child{height:200px!important}
-    .tn-prop-sec{padding:48px 14px!important}
-    .tn-prop-sec h2{font-size:32px!important}
-    .tn-vip-grid{gap:8px!important}
-    .tn-del-sec{padding:40px 14px!important}
-    .tn-del-sec h2{font-size:28px!important}
-    .tn-del-sec p{font-size:14px!important}
-    .tn-del-sec .tn-del-icon{font-size:36px!important}
-    .tn-test-sec{padding:48px 14px!important}
-    .tn-test-sec p{font-size:20px!important}
-    .tn-cta-sec{padding:12px 14px 40px!important}
-    .tn-cta-inner{padding:32px 20px!important}
-    .tn-cta-sec h2{font-size:28px!important}
-    .tn-cta-sec p{font-size:14px!important}
-    .tn-cta-btns a{font-size:13px!important;padding:12px 20px!important}
-    .tn-foot-sec{padding:40px 14px 20px!important}
-    .tn-foot-inner{flex-direction:column!important;gap:24px!important}
-    .tn-foot-inner>div{max-width:100%!important}
-    .tn-marq{font-size:16px!important}
-  }
-  @media (max-width:400px){
-    .tn-plant-grid{grid-template-columns:1fr 1fr!important;gap:6px!important}
-    .tn-vip-grid{grid-template-columns:repeat(2,1fr)!important;gap:6px!important}
-  }
-  .tn-menu-open .tn-hamburger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)!important}
-  .tn-menu-open .tn-hamburger span:nth-child(2){opacity:0!important}
-  .tn-menu-open .tn-hamburger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)!important}
-</style>
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/reviews.css">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="seo/manifest.json">
 </helmet>
 
 <div style="--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12);background:var(--mist);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;min-height:100vh;position:relative">
@@ -205,23 +39,23 @@
 
   <div id="tn-nav" style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .4s ease,box-shadow .4s ease">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/logo-icon.png" alt="Trinetra Nursery" style="height:42px;width:auto;display:block">
+      <img src="assets/images/logo-icon.png" alt="Trinetra Nursery" style="height:42px;width:auto;display:block">
       <span class="tn-nav-logo" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--pine);letter-spacing:-.02em">trinetra</span>
     </div>
-    <div class="tn-hamburger" onclick="tnToggleMenu()" style="display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;z-index:65">
+    <div class="tn-hamburger" data-toggle-menu style="display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;z-index:65">
       <span style="display:block;width:24px;height:2.5px;background:var(--pine);border-radius:2px;transition:transform .3s ease,opacity .3s ease"></span>
       <span style="display:block;width:24px;height:2.5px;background:var(--pine);border-radius:2px;transition:transform .3s ease,opacity .3s ease"></span>
       <span style="display:block;width:24px;height:2.5px;background:var(--pine);border-radius:2px;transition:transform .3s ease,opacity .3s ease"></span>
     </div>
     <div class="tn-nav-items" style="display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--ink)">
-      <span data-scroll="home" class="tn-nav-link" onclick="tnCloseMenu()" style="color:var(--grn);cursor:pointer;transition:color .25s ease">Home</span>
-      <span data-scroll="about" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">About</span>
-      <span data-scroll="services" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Services</span>
-      <span data-scroll="plants" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Plants</span>
-      <span data-scroll="vip" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">VIP Gallery</span>
-      <span data-scroll="contact" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Contact</span>
-            <span data-scroll="location" class="tn-nav-link" onclick="tnCloseMenu()" style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Location</span>
-      <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." class="tn-nav-btn" onclick="tnCloseMenu()" style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,157,85,.32)">WhatsApp us</a>
+      <span data-scroll="home" class="tn-nav-link" data-close-menu style="color:var(--grn);cursor:pointer;transition:color .25s ease">Home</span>
+      <span data-scroll="about" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">About</span>
+      <span data-scroll="services" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Services</span>
+      <span data-scroll="plants" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Plants</span>
+      <span data-scroll="vip" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">VIP Gallery</span>
+      <span data-scroll="contact" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Contact</span>
+            <span data-scroll="location" class="tn-nav-link" data-close-menu style="cursor:pointer;transition:color .25s ease" style-hover="color:var(--grn)">Location</span>
+      <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." class="tn-nav-btn" data-close-menu style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,157,85,.32)">WhatsApp us</a>
     </div>
   </div>
 
@@ -246,7 +80,7 @@
       <div class="tn-hero-img" style="flex:.95;position:relative;animation:tnFadeInRight .9s .2s ease both">
         <div style="position:absolute;inset:-26px -16px -16px -26px;background:var(--lime);z-index:0;animation:tnBlobB 16s ease-in-out infinite"></div>
         <div style="position:relative;z-index:1;height:480px;overflow:hidden;box-shadow:0 26px 60px rgba(14,42,30,.26);animation:tnBlob 20s ease-in-out infinite">
-          <img data-src="assets/projects/palm-avenue.jpg" alt="Palm avenue landscaping by Trinetra Nursery" style="width:100%;height:100%;object-fit:cover">
+          <img data-src="assets/images/projects/palm-avenue.jpg" alt="Palm avenue landscaping by Trinetra Nursery" style="width:100%;height:100%;object-fit:cover">
         </div>
       </div>
     </div>
@@ -269,7 +103,7 @@
       <div style="flex:none;position:relative;width:380px" data-reveal="left">
         <div style="position:absolute;top:24px;left:24px;width:100%;height:100%;border:1.5px solid var(--brass);border-radius:200px 200px 14px 14px;z-index:0"></div>
         <div style="position:relative;z-index:1;width:380px;height:470px;border-radius:200px 200px 14px 14px;overflow:hidden;animation:tnFloat 9s ease-in-out infinite">
-          <img data-src="assets/projects/villa-pool.jpg" alt="Aerial view of a Trinetra landscaped villa" style="width:100%;height:100%;object-fit:cover">
+          <img data-src="assets/images/projects/villa-pool.jpg" alt="Aerial view of a Trinetra landscaped villa" style="width:100%;height:100%;object-fit:cover">
         </div>
       </div>
       <div style="flex:1" data-reveal="up" data-reveal-delay="120">
@@ -329,7 +163,7 @@
       </div>
       <div class="tn-plant-grid">
         <sc-for list="{{ plants }}" as="p" hint-placeholder-count="7">
-          <div onclick="goToPlant('{{ p.href }}','{{ p.name }}')" data-reveal="up" data-reveal-delay="{{ p.d }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 12px;cursor:pointer;transition:background .35s ease,transform .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.14);transform:translateY(-4px);border-color:var(--lime)">
+          <div data-goto-href="{{ p.href }}" data-goto-name="{{ p.name }}" data-reveal="up" data-reveal-delay="{{ p.d }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 12px;cursor:pointer;transition:background .35s ease,transform .35s ease,border-color .35s ease" style-hover="background:rgba(255,255,255,.14);transform:translateY(-4px);border-color:var(--lime)">
             <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:17px;color:#fff;line-height:1.15;text-align:center">{{ p.name }}</div>
             <div style="font-size:12px;font-weight:600;color:var(--lime)">{{ p.count }}</div>
           </div>
@@ -367,7 +201,7 @@
       </div>
       <div class="tn-why" style="display:flex;gap:48px;align-items:center;margin-bottom:56px">
         <div style="flex:none;width:420px;height:300px;border-radius:18px 120px 18px 18px;overflow:hidden" data-reveal="left">
-          <img data-src="assets/projects/delivery.jpg" alt="Nursery-grown plants delivered to site" style="width:100%;height:100%;object-fit:cover">
+          <img data-src="assets/images/projects/delivery.jpg" alt="Nursery-grown plants delivered to site" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="flex:1" data-reveal="up" data-reveal-delay="100">
           <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:30px;color:var(--pine);margin:0">Premium plant quality</h3>
@@ -381,7 +215,7 @@
       </div>
       <div class="tn-why-rev" style="display:flex;gap:48px;align-items:center;flex-direction:row-reverse">
         <div style="flex:none;width:420px;height:300px;border-radius:120px 18px 18px 18px;overflow:hidden" data-reveal="right">
-          <img data-src="assets/projects/team.jpg" alt="Trinetra gardening team at work" style="width:100%;height:100%;object-fit:cover">
+          <img data-src="assets/images/projects/team.jpg" alt="Trinetra gardening team at work" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="flex:1" data-reveal="up" data-reveal-delay="100">
           <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:30px;color:var(--pine);margin:0">Experienced team</h3>
@@ -399,7 +233,12 @@
   <div class="tn-del-sec" style="background:var(--pine);padding:64px 56px;position:relative;overflow:hidden">
     <div style="position:absolute;top:-90px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,#1f9d55,transparent 70%);filter:blur(36px);opacity:.45;animation:tnBlob 20s ease-in-out infinite"></div>
     <div data-reveal="up" style="max-width:1180px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;text-align:center">
-      <span class="tn-del-icon" style="font-size:46px;line-height:1">🚚</span>
+      <svg class="tn-del-icon" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:#C6F25C">
+        <rect x="1" y="3" width="15" height="13" rx="2" ry="2"/>
+        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+        <circle cx="5.5" cy="18.5" r="2.5"/>
+        <circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
       <div>
         <div style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:10px">Shipping nationwide</div>
         <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.025em;color:#fff;margin:0">We deliver all over India</h2>
@@ -423,7 +262,6 @@
             <div style="flex:1">
               <div style="font-family:'Marcellus',serif;font-size:26px;color:var(--pine)">{{ pr.name }}</div>
               <div style="font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--brass);margin-top:4px">{{ pr.role }}</div>
-              <p style="font-size:14.5px;line-height:1.65;color:#4a5746;margin:14px 0 0">{{ pr.bio }}</p>
             </div>
           </div>
         </sc-for>
@@ -483,6 +321,73 @@
       </div>
     </div>
   </div>
+
+  <!-- ===== CUSTOMER REVIEWS SECTION ===== -->
+  <section id="reviews" class="tn-reviews-section" aria-labelledby="tn-reviews-heading">
+    <div class="tn-reviews-inner">
+
+      <!-- Section Header -->
+      <header class="tn-reviews-header" data-reveal="up">
+        <p class="tn-reviews-badge">What our customers say</p>
+        <h2 id="tn-reviews-heading" class="tn-reviews-title">Customer Reviews</h2>
+        <p class="tn-reviews-subtitle">Share your experience with Trinetra Nursery and help others discover quality plants and landscaping services.</p>
+      </header>
+
+      <!-- Rating Summary (auto-populated by reviews.js) -->
+      <div id="tn-reviews-summary" class="tn-reviews-summary" aria-live="polite"></div>
+
+      <!-- Review Submission Form -->
+      <div class="tn-review-form-wrap" data-reveal="up" data-reveal-delay="120">
+        <form id="tn-review-form" class="tn-form-grid" novalidate>
+
+          <!-- Star Rating -->
+          <fieldset class="tn-rating-group">
+            <legend class="tn-form-label">Your Rating <span class="tn-required">*</span></legend>
+            <div id="tn-rating" class="tn-rating" role="group" aria-label="Star rating">
+              <button type="button" class="tn-rating-star" data-value="1" aria-label="1 star" aria-pressed="false">★</button>
+              <button type="button" class="tn-rating-star" data-value="2" aria-label="2 stars" aria-pressed="false">★</button>
+              <button type="button" class="tn-rating-star" data-value="3" aria-label="3 stars" aria-pressed="false">★</button>
+              <button type="button" class="tn-rating-star" data-value="4" aria-label="4 stars" aria-pressed="false">★</button>
+              <button type="button" class="tn-rating-star" data-value="5" aria-label="5 stars" aria-pressed="false">★</button>
+            </div>
+            <p id="tn-rating-error" class="tn-field-error" hidden>Please select a star rating.</p>
+          </fieldset>
+
+          <!-- Name Input -->
+          <div class="tn-form-group">
+            <label for="tn-review-name" class="tn-form-label">
+              Your Name <span class="tn-required">*</span>
+            </label>
+            <input type="text" id="tn-review-name" class="tn-form-input" name="name" placeholder="Enter your name" maxlength="50" autocomplete="name">
+          </div>
+
+          <!-- Review Text -->
+          <div class="tn-form-group">
+            <label for="tn-review-text" class="tn-form-label">
+              Your Review <span class="tn-required">*</span>
+            </label>
+            <textarea id="tn-review-text" class="tn-form-textarea" name="review" placeholder="Share your experience with our plants or landscaping services..." maxlength="500"></textarea>
+            <div class="tn-char-counter" aria-live="polite">
+              <span id="tn-char-count">0/500</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="tn-review-submit" class="tn-review-submit">
+            Submit Review
+          </button>
+        </form>
+      </div>
+
+      <!-- Reviews Display Area -->
+      <div id="tn-reviews-list" class="tn-reviews-list" aria-live="polite">
+        <noscript>
+          <p class="tn-reviews-message">Please enable JavaScript to load and add customer reviews.</p>
+        </noscript>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ===== LOCATION ===== -->
     <div id="location" style="background:var(--pine);padding:104px 56px;position:relative;overflow:hidden">
@@ -546,7 +451,7 @@
       <div class="tn-foot-inner" style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)">
         <div style="max-width:300px">
           <div style="display:flex;align-items:center;gap:11px">
-            <img src="assets/logo-icon.png" alt="Trinetra Nursery" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3))">
+            <img src="assets/images/logo-icon.png" alt="Trinetra Nursery" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3))">
             <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;color:#fff">trinetra</span>
           </div>
           <p style="font-family:'Spectral',serif;font-size:16px;line-height:1.6;margin:18px 0 0;color:#9fb8a2">Premium plants and landscaping expertise since 1998. We transform spaces with nature’s artistry.</p>
@@ -617,27 +522,27 @@ class Component extends DCLogic {
     ];
 
     const works = [
-      { title: 'Luxury Villa & Pool', cat: 'Landscaping & Hardscape', src: 'assets/projects/villa-pool.jpg' },
-      { title: 'Commercial Greenscape', cat: 'Landscaping & Irrigation', src: 'assets/projects/commercial.jpg' },
-      { title: 'Grass-Paver Courtyard', cat: 'Garden Design', src: 'assets/projects/courtyard.jpg' },
-      { title: 'Villa Avenue Plantation', cat: 'Avenue & Streetscape', src: 'assets/projects/avenue-road.jpg' },
+      { title: 'Luxury Villa & Pool', cat: 'Landscaping & Hardscape', src: 'assets/images/projects/villa-pool.jpg' },
+      { title: 'Commercial Greenscape', cat: 'Landscaping & Irrigation', src: 'assets/images/projects/commercial.jpg' },
+      { title: 'Grass-Paver Courtyard', cat: 'Garden Design', src: 'assets/images/projects/courtyard.jpg' },
+      { title: 'Villa Avenue Plantation', cat: 'Avenue & Streetscape', src: 'assets/images/projects/avenue-road.jpg' },
     ].map((w, i) => ({ ...w, d: i * 80 }));
 
     const proprietors = [
-      { name: 'V.V. Rao', initials: 'VR', src: 'assets/people/p2.jpg', role: 'Co-Founder & Chief Horticulturist', bio: 'With a deep-rooted passion for botany, V.V. Rao leads our plant quality and greenhouse operations with 15+ years of expertise.' },
-      { name: 'V.T. Srinivasu', initials: 'VS', src: 'assets/people/p1.jpg', role: 'Co-Founder & Project Director', bio: 'V.T. Srinivasu oversees our large-scale landscaping projects, ensuring every garden transformation is a masterpiece of design.' },
+      { name: 'V.V. Rao', initials: 'VR', src: 'assets/images/people/p2.jpg', role: 'Co-Founder & Chief Horticulturist' },
+      { name: 'V.T. Srinivasu', initials: 'VS', src: 'assets/images/people/p1.jpg', role: 'Co-Founder & Project Director' },
     ].map((p, i) => ({ ...p, d: i * 120 }));
 
     const vips = [
-      { name: 'Pawan Kalyan', role: 'Actor & Deputy CM, AP', src: 'assets/vip/pawan.jpg' },
-      { name: 'N. Chandrababu Naidu', role: 'Chief Minister, AP', src: 'assets/vip/chandrababu.jpg' },
-      { name: 'Megastar Chiranjeevi', role: 'Actor & Padma Vibhushan', src: 'assets/vip/chiranjeevi.jpg' },
-      { name: 'T. Uday Srinivas', role: 'Member of Parliament', src: 'assets/vip/vip4.jpg' },
-      { name: 'Daggubati Purandeswari', role: 'Member of the Lok Sabha', src: 'assets/vip/vip5.jpg' },
-      { name: 'Gummadi Sandhya Rani', role: 'Minister, Women & Child / Tribal Welfare, AP', src: 'assets/vip/vip6.jpg' },
-      { name: 'Botsa Satyanarayana', role: 'Leader of the Opposition, AP Council', src: 'assets/vip/vip7.jpg' },
-      { name: 'Gorantla Butchaiah Chowdary', role: 'MLA, Andhra Pradesh', src: 'assets/vip/vip8.jpg' },
-      { name: 'Kandula Durgesh', role: 'Cabinet Minister for Tourism & Culture, AP', src: 'assets/vip/vip9.jpg' },
+      { name: 'Pawan Kalyan', role: 'Actor & Deputy CM, AP', src: 'assets/images/vip/pawan.jpg' },
+      { name: 'N. Chandrababu Naidu', role: 'Chief Minister, AP', src: 'assets/images/vip/chandrababu.jpg' },
+      { name: 'Megastar Chiranjeevi', role: 'Actor & Padma Vibhushan', src: 'assets/images/vip/chiranjeevi.jpg' },
+      { name: 'T. Uday Srinivas', role: 'Member of Parliament', src: 'assets/images/vip/vip4.jpg' },
+      { name: 'Daggubati Purandeswari', role: 'Member of the Lok Sabha', src: 'assets/images/vip/vip5.jpg' },
+      { name: 'Gummadi Sandhya Rani', role: 'Minister, Women & Child / Tribal Welfare, AP', src: 'assets/images/vip/vip6.jpg' },
+      { name: 'Botsa Satyanarayana', role: 'Leader of the Opposition, AP Council', src: 'assets/images/vip/vip7.jpg' },
+      { name: 'Gorantla Butchaiah Chowdary', role: 'MLA, Andhra Pradesh', src: 'assets/images/vip/vip8.jpg' },
+      { name: 'Kandula Durgesh', role: 'Cabinet Minister for Tourism & Culture, AP', src: 'assets/images/vip/vip9.jpg' },
     ].map((v, i) => ({ ...v, d: (i % 4) * 90 }));
 
     return { plants, services, stats, works, proprietors, vips };
@@ -751,6 +656,18 @@ class Component extends DCLogic {
       el.addEventListener('click', () => scrollToId(el.getAttribute('data-scroll')));
     });
 
+    // Categories, menu toggle & close: bound to real click functions. The DC
+    // runtime maps template onclick attributes to string-valued onClick props,
+    // which React rejects ("onClick listener must be a function" #231).
+    document.querySelectorAll('[data-goto-href]').forEach((el) => {
+      el.addEventListener('click', () => goToPlant(el.getAttribute('data-goto-href'), el.getAttribute('data-goto-name')));
+    });
+    const dcHam = document.querySelector('.tn-hamburger');
+    if (dcHam) dcHam.addEventListener('click', () => tnToggleMenu());
+    document.querySelectorAll('[data-close-menu]').forEach((el) => {
+      el.addEventListener('click', () => tnCloseMenu());
+    });
+
     // Top scroll-progress bar
     const prog = document.getElementById('tn-progress');
     if (prog) {
@@ -809,20 +726,10 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script>
-function goToPlant(href, name) {
-  var t = document.getElementById('tn-loader');
-  document.getElementById('tn-loader-name').textContent = name;
-  t.style.display = 'flex';
-  setTimeout(function() { window.location.href = href; }, 500);
-}
-function tnToggleMenu() {
-  var n = document.getElementById('tn-nav');
-  n.classList.toggle('tn-menu-open');
-}
-function tnCloseMenu() {
-  document.getElementById('tn-nav').classList.remove('tn-menu-open');
-}
-</script>
+<script src="assets/js/home.js"></script>
+
+<!-- Reviews System (ES Module) -->
+<script type="module" src="assets/js/reviews.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!-- ===== CUSTOMER REVIEWS SECTION ===== -->
+<!--
+  HOW TO USE:
+  1. Paste this section into your page BEFORE the location section.
+  2. Add to <head>:
+       <link rel="stylesheet" href="assets/css/reviews.css">
+  3. Add the module script just before </body>. It imports the backend
+     automatically (no other script tags needed):
+       <script type="module" src="assets/js/reviews.js"></script>
+-->
+<section id="reviews" class="tn-reviews-section" aria-labelledby="tn-reviews-heading">
+  <div class="tn-reviews-inner">
+
+    <!-- Section Header -->
+    <header class="tn-reviews-header" data-reveal="up">
+      <p class="tn-reviews-badge">What our customers say</p>
+      <h2 id="tn-reviews-heading" class="tn-reviews-title">Customer Reviews</h2>
+      <p class="tn-reviews-subtitle">Share your experience with Trinetra Nursery and help others discover quality plants and landscaping services.</p>
+    </header>
+
+    <!-- Rating Summary (auto-populated by reviews.js) -->
+    <div id="tn-reviews-summary" class="tn-reviews-summary" aria-live="polite"></div>
+
+    <!-- Review Submission Form -->
+    <div class="tn-review-form-wrap" data-reveal="up" data-reveal-delay="120">
+      <form id="tn-review-form" class="tn-form-grid" novalidate>
+
+        <!-- Star Rating -->
+        <fieldset class="tn-rating-group">
+          <legend class="tn-form-label">Your Rating <span class="tn-required">*</span></legend>
+          <div id="tn-rating" class="tn-rating" role="group" aria-label="Star rating">
+            <button type="button" class="tn-rating-star" data-value="1" aria-label="1 star" aria-pressed="false">★</button>
+            <button type="button" class="tn-rating-star" data-value="2" aria-label="2 stars" aria-pressed="false">★</button>
+            <button type="button" class="tn-rating-star" data-value="3" aria-label="3 stars" aria-pressed="false">★</button>
+            <button type="button" class="tn-rating-star" data-value="4" aria-label="4 stars" aria-pressed="false">★</button>
+            <button type="button" class="tn-rating-star" data-value="5" aria-label="5 stars" aria-pressed="false">★</button>
+          </div>
+          <p id="tn-rating-error" class="tn-field-error" hidden>Please select a star rating.</p>
+        </fieldset>
+
+        <!-- Name Input -->
+        <div class="tn-form-group">
+          <label for="tn-review-name" class="tn-form-label">
+            Your Name <span class="tn-required">*</span>
+          </label>
+          <input
+            type="text"
+            id="tn-review-name"
+            class="tn-form-input"
+            name="name"
+            placeholder="Enter your name"
+            maxlength="50"
+            autocomplete="name"
+          >
+        </div>
+
+        <!-- Review Text -->
+        <div class="tn-form-group">
+          <label for="tn-review-text" class="tn-form-label">
+            Your Review <span class="tn-required">*</span>
+          </label>
+          <textarea
+            id="tn-review-text"
+            class="tn-form-textarea"
+            name="review"
+            placeholder="Share your experience with our plants or landscaping services..."
+            maxlength="500"
+          ></textarea>
+          <div class="tn-char-counter" aria-live="polite">
+            <span id="tn-char-count">0/500</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="tn-review-submit" class="tn-review-submit">
+          Submit Review
+        </button>
+      </form>
+    </div>
+
+    <!-- Reviews Display Area (skeletons → cards are rendered by reviews.js) -->
+    <div id="tn-reviews-list" class="tn-reviews-list" aria-live="polite">
+      <noscript>
+        <p class="tn-reviews-message">Please enable JavaScript to load and add customer reviews.</p>
+      </noscript>
+    </div>
+
+  </div>
+</section>

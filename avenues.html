@@ -7,26 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{margin:0;padding:0;min-height:100vh}
-  img{display:block}
-  ::selection{background:#C6F25C;color:#0E2A1E}
-  @keyframes tnBlob{0%,100%{border-radius:42% 58% 63% 37%/41% 44% 56% 59%}33%{border-radius:62% 38% 34% 66%/56% 62% 38% 44%}66%{border-radius:38% 62% 58% 42%/48% 36% 64% 52%}}
-  @keyframes tnBlobB{0%,100%{border-radius:58% 42% 38% 62%/52% 56% 44% 48%}50%{border-radius:40% 60% 64% 36%/62% 40% 60% 38%}}
-  @keyframes tnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
-  @keyframes tnFloatB{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
-  @keyframes tnFadeInUp{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:translateY(0)}}
-  @media (prefers-reduced-motion: reduce){*{animation:none!important}}
-  :root{--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12)}
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="seo/manifest.json">
+<style>:root{--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12)}</style>
 </head>
 <body>
 <div style="background:var(--pine);color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;min-height:100vh;position:relative">
 
 <div id="tn-progress" style="position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--grn),var(--lime));z-index:100;transition:width .12s linear"></div>
 
-<div id="tn-nav" style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .4s ease,box-shadow .4s ease">
+<div id="tn-nav" data-nav-bg="rgba(14,42,30,.85)" data-nav-shadow="0 1px 0 rgba(255,255,255,.06)" style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .4s ease,box-shadow .4s ease">
   <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none">
     <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#fff;letter-spacing:-.02em">trinetra</span>
   </a>
@@ -52,7 +46,7 @@
 <div style="max-width:1240px;margin:0 auto;padding:0 56px 80px">
   <div style="column-count:4;column-gap:18px">
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a04.jpg" alt="Gulmohar" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a04.jpg" alt="Gulmohar" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Gulmohar (Flame Tree)</div>
@@ -60,7 +54,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a03.jpg" alt="Ashoka" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a03.jpg" alt="Ashoka" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Ashoka (Mast Tree)</div>
@@ -68,7 +62,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a01.jpg" alt="Bottle / Tree avenue" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a01.jpg" alt="Bottle / Tree avenue" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Bottle / Tree avenue</div>
@@ -76,7 +70,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a02.jpg" alt="Copperpod saplings" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a02.jpg" alt="Copperpod saplings" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Copperpod saplings</div>
@@ -84,7 +78,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a05.jpg" alt="Neem" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a05.jpg" alt="Neem" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Neem</div>
@@ -92,7 +86,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a10.jpg" alt="Badam" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a10.jpg" alt="Badam" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Badam (Terminalia)</div>
@@ -100,7 +94,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a09.jpg" alt="Mango avenue stock" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a09.jpg" alt="Mango avenue stock" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Mango avenue stock</div>
@@ -108,7 +102,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a06.jpg" alt="Tall leafy avenue" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a06.jpg" alt="Tall leafy avenue" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Tall leafy avenue</div>
@@ -116,7 +110,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a07.jpg" alt="Rain tree saplings" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a07.jpg" alt="Rain tree saplings" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Rain tree saplings</div>
@@ -124,7 +118,7 @@
       </div>
     </div>
     <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3)">
-      <img src="assets/avenue/a08.jpg" alt="Avenue nursery rows" style="display:block;width:100%;height:auto">
+      <img src="assets/images/avenue/a08.jpg" alt="Avenue nursery rows" style="display:block;width:100%;height:auto">
       <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
       <div style="position:absolute;left:16px;right:16px;bottom:14px;pointer-events:none">
         <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;color:#fff;line-height:1.1">Avenue nursery rows</div>
@@ -169,20 +163,6 @@
 </div>
 
 </div>
-<script>
-(function(){
-  var prog=document.getElementById('tn-progress'),h,onP=function(){
-    h=document.documentElement.scrollHeight-window.innerHeight;
-    prog.style.width=(Math.max(0,Math.min(1,(window.scrollY||window.pageYOffset||0)/(h||1)))*100)+'%';
-  };
-  window.addEventListener('scroll',onP,{passive:true});window.addEventListener('resize',onP,{passive:true});onP();
-  var nav=document.getElementById('tn-nav'),onS=function(){
-    var y=window.scrollY||document.documentElement.scrollTop||0;
-    if(y>40){nav.style.background='rgba(14,42,30,.85)';nav.style.backdropFilter='blur(12px)';nav.style.webkitBackdropFilter='blur(12px)';nav.style.boxShadow='0 1px 0 rgba(255,255,255,.06)'}
-    else{nav.style.background='transparent';nav.style.backdropFilter='none';nav.style.webkitBackdropFilter='none';nav.style.boxShadow='none'}
-  };
-  window.addEventListener('scroll',onS,{passive:true});onS();
-})();
-</script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
