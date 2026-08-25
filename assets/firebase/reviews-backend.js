@@ -27,9 +27,7 @@ import {
 // ---- Constants (kept in one place so the UI and rules can agree) ----
 export const LIMITS = Object.freeze({
   name: 50,
-  review: 500,
-  ratingMin: 1,
-  ratingMax: 5
+  review: 500
 });
 
 const COLLECTION = "reviews";
@@ -43,22 +41,16 @@ const reviewsRef = () => collection(db, COLLECTION);
  * Normalise + validate review inputs. Throws a plain Error with a
  * user-safe message when invalid, so the frontend can surface it directly.
  */
-function cleanReview({ name, reviewText, rating }) {
+function cleanReview({ name, reviewText }) {
   const cleanName = String(name ?? "").trim().slice(0, LIMITS.name);
   if (!cleanName) throw new Error("Please enter your name.");
 
   const cleanText = String(reviewText ?? "").trim().slice(0, LIMITS.review);
   if (!cleanText) throw new Error("Please write a review.");
 
-  const n = Number(rating);
-  if (!Number.isInteger(n) || n < LIMITS.ratingMin || n > LIMITS.ratingMax) {
-    throw new Error("Please select a star rating.");
-  }
-
   return {
     name: cleanName,
-    reviewText: cleanText,
-    rating: n
+    reviewText: cleanText
   };
 }
 
@@ -68,7 +60,7 @@ function cleanReview({ name, reviewText, rating }) {
 
 /**
  * Save a new review.
- * @param {Object} data { name, reviewText, rating }
+ * @param {Object} data { name, reviewText }
  * @returns {Promise<string>} the new Firestore document id
  */
 export async function saveReview(data) {
@@ -106,43 +98,6 @@ export async function getReviews(max = 50) {
     }
   });
   return list;
-}
-
-/**
- * Compute the rating summary — average, total count and per-star
- * distribution — across ALL approved reviews.
- *
- * Firestore offers no cheap aggregation, so we read the collection and
- * reduce in-memory. For the expected volumes of a nursery this is fast,
- * cheap, and always up to date (versus hand-maintained counters).
- *
- * @returns {Promise<{average:number,total:number,distribution:Object}>}
- */
-export async function getStats() {
-  const q = query(reviewsRef());
-  const snapshot = await getDocs(q);
-
-  const distribution = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
-  let sum = 0;
-  let count = 0;
-
-  snapshot.forEach((docSnap) => {
-    const data = docSnap.data();
-    // Only count approved reviews
-    if (data.approved !== true) return;
-    
-    const rating = Number(data.rating);
-    // Skip any legacy/restored documents without a valid rating so they
-    // cannot skew the summary.
-    if (!Number.isInteger(rating) || rating < 1 || rating > 5) return;
-    distribution[rating] += 1;
-    sum += rating;
-    count += 1;
-  });
-
-  const average = count === 0 ? 0 : Math.round((sum / count) * 10) / 10;
-
-  return { average, total: count, distribution };
 }
 
 /**

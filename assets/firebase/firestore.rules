@@ -32,12 +32,9 @@ service cloud.firestore {
                     && request.resource.data.reviewText is string
                     && request.resource.data.reviewText.size() >= 1
                     && request.resource.data.reviewText.size() <= 500
-                    && request.resource.data.rating is int
-                    && request.resource.data.rating >= 1
-                    && request.resource.data.rating <= 5
                     && request.resource.data.approved == true
-                    && request.resource.data.keys().hasAll(['name', 'reviewText', 'rating', 'approved', 'timestamp'])
-                    && request.resource.data.keys().hasOnly(['name', 'reviewText', 'rating', 'approved', 'timestamp']);
+                    && request.resource.data.keys().hasAll(['name', 'reviewText', 'approved', 'timestamp'])
+                    && request.resource.data.keys().hasOnly(['name', 'reviewText', 'approved', 'timestamp']);
 
       // No public updates or deletes (manage via Firebase Console / admin)
       allow update, delete: if false;

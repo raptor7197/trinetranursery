@@ -51,18 +51,6 @@ export function buildInitialAvatar(name) {
   return avatar;
 }
 
-/** One (filled ★ / empty ☆) row rendered as text, label-friendly. */
-export function renderStars(rating, className = "tn-stars") {
-  const wrap = el("span", className);
-  wrap.setAttribute("role", "img");
-  wrap.setAttribute("aria-label", `${rating} out of 5 stars`);
-  const rounded = Math.round(Number(rating) || 0);
-  let html = "";
-  for (let i = 1; i <= 5; i += 1) html += i <= rounded ? "★" : "☆";
-  wrap.textContent = html;
-  return wrap;
-}
-
 /** Build one review card using DOM APIs (no string-concatenated HTML). */
 export function createReviewCard(review) {
   const card = el("article", "tn-review-card");
@@ -73,7 +61,6 @@ export function createReviewCard(review) {
 
   const info = el("div", "tn-review-info");
   info.appendChild(el("div", "tn-review-name", review.name || "Anonymous"));
-  info.appendChild(renderStars(review.rating || 0, "tn-review-stars"));
   info.appendChild(el("time", "tn-review-date", formatDate(review.timestamp)));
   header.appendChild(info);
 

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gift Plants — Trinetra Nursery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
@@ -12,128 +13,108 @@
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
 <link rel="manifest" href="seo/manifest.json">
-<title>Gift Plants · Trinetra Nursery</title>
+<style>:root{--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12)}
+@media (max-width:768px){
+  #tn-nav{padding:14px 24px!important}
+  .tn-hero-section{padding:32px 24px 48px!important}
+  .tn-gallery-container{padding:0 24px 48px!important}
+  h1{font-size:42px!important;line-height:1.1!important}
+}
+@media (max-width:480px){
+  #tn-nav{padding:12px 16px!important}
+  #tn-nav img{height:36px!important}
+  #tn-nav span{font-size:22px!important}
+  .tn-hero-section{padding:24px 16px 40px!important}
+  .tn-gallery-container{padding:0 16px 40px!important}
+  h1{font-size:34px!important;line-height:1.15!important}
+  .tn-hero-section p{font-size:16px!important}
+}
+</style>
 </head>
-<body style="margin:0;background:var(--pine);color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;min-height:100vh">
-
-<div style="--pine:#0E2A1E;--grn:#1F9D55;--lime:#C6F25C;--mist:#F1F5EE;--ink:#15241B;--muted:#5d6b5c;--brass:#B5894A;--cream:#F4F1E7;--line:rgba(14,42,30,.12);position:relative;min-height:100vh">
+<body>
+<div style="background:var(--cream);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;min-height:100vh;position:relative">
 
 <div id="tn-progress" style="position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--grn),var(--lime));z-index:100;transition:width .12s linear"></div>
 
-<div style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(14,42,30,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.08)">
+<div id="tn-nav" data-nav-bg="rgba(244,241,231,.88)" data-nav-shadow="0 1px 0 rgba(14,42,30,.08)" style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .4s ease,box-shadow .4s ease">
   <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none">
     <img src="assets/images/logo-icon.png" alt="Trinetra Nursery" style="height:42px;width:auto;display:block">
-    <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#fff;letter-spacing:-.02em">trinetra</span>
+    <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--pine);letter-spacing:-.02em">trinetra</span>
   </a>
-  <div style="display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600">
-    <a href="index.html" style="color:var(--lime);text-decoration:none;transition:color .25s ease">Home</a>
-    <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease">WhatsApp us</a>
+  <div style="display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600;color:var(--ink)">
+    <a href="index.html" style="color:var(--grn);cursor:pointer;transition:color .25s ease;text-decoration:none">Home</a>
+    <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20enquire%20about%20your%20plants." style="background:var(--grn);color:#fff;padding:11px 22px;border-radius:100px;font-size:13px;cursor:pointer;white-space:nowrap;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 24px rgba(31,157,85,.32)'" onmouseout="this.style.transform='';this.style.boxShadow=''">WhatsApp us</a>
   </div>
 </div>
 
-<div style="position:relative;overflow:hidden;padding:80px 56px 60px">
-  <div style="position:absolute;top:-80px;right:-60px;width:420px;height:420px;background:radial-gradient(circle,#1f9d55,transparent 70%);filter:blur(44px);opacity:.45;z-index:0;animation:tnBlob 20s ease-in-out infinite,tnFloat 12s ease-in-out infinite"></div>
-  <div style="position:absolute;bottom:-100px;left:60px;width:300px;height:300px;background:radial-gradient(circle,rgba(198,242,92,.3),transparent 70%);filter:blur(36px);opacity:.4;z-index:0;animation:tnBlobB 16s ease-in-out infinite,tnFloatB 10s ease-in-out infinite"></div>
+<div style="position:relative;overflow:hidden;padding:48px 56px 32px" class="tn-hero-section">
+  <div style="position:absolute;top:-80px;left:-60px;width:400px;height:400px;background:radial-gradient(circle at 35% 35%,#bdeccd,#3aa86a);filter:blur(46px);opacity:.55;z-index:0;animation:tnBlob 18s ease-in-out infinite,tnFloat 12s ease-in-out infinite"></div>
+  <div style="position:absolute;top:-60px;right:80px;width:320px;height:320px;background:radial-gradient(circle at 50% 50%,#e6fba5,#9fd83f);filter:blur(40px);opacity:.45;z-index:0;animation:tnBlobB 15s ease-in-out infinite,tnFloatB 10s ease-in-out infinite"></div>
 
   <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto">
-    <div style="text-align:center;animation:tnFadeInUp .7s ease both">
-      <div style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:10px">Thoughtful greenery</div>
-      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:56px;letter-spacing:-.025em;color:#fff;margin:0;line-height:1.05">Ready to gift</h1>
-      <div style="font-family:'Marcellus',serif;font-size:26px;color:var(--lime);margin:12px 0 0">Gifting plants</div>
-      <p style="font-size:17px;line-height:1.7;color:#9fb8a2;margin:18px auto 0;max-width:620px">Charming desk-top &amp; keepsake plants — succulents, lucky bamboo, fortune fruit &amp; more, gift-wrapped.</p>
+    <div style="animation:tnFadeInUp .7s ease both">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.7);backdrop-filter:blur(6px);color:var(--grn);font-size:12px;font-weight:700;letter-spacing:.06em;padding:8px 16px;border-radius:100px;text-transform:uppercase;border:1px solid rgba(31,157,85,.2);margin-bottom:20px">Gift collection</div>
+      <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:56px;line-height:1.1;letter-spacing:-.03em;color:var(--pine);margin:0 0 16px 0">Perfect green gifts</h1>
+      <p style="font-size:18px;line-height:1.6;color:var(--muted);margin:0;max-width:500px">Beautifully potted plants for every occasion — 40+ varieties.</p>
+    </div>
+  </div>
+</div>
+<div style="max-width:1240px;margin:0 auto;padding:0 56px 80px" class="tn-gallery-container">
+  <div class="tn-gallery">
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240612_161403.jpg" alt="Gift plants" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Gift plants</div><div style="font-size:12px;color:var(--lime)">Perfect presents</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240612_161418.jpg" alt="Potted gifts" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Potted gifts</div><div style="font-size:12px;color:var(--lime)">Ready to gift</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240612_162816.jpg" alt="Decorative plants" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Decorative plants</div><div style="font-size:12px;color:var(--lime)">Beautiful collection</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240824_095622.jpg" alt="Special occasions" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Special occasions</div><div style="font-size:12px;color:var(--lime)">Thoughtful gifts</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240824_095700.jpg" alt="Green gifts" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Green gifts</div><div style="font-size:12px;color:var(--lime)">Eco-friendly</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20240824_095812.jpg" alt="Premium gifts" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Premium gifts</div><div style="font-size:12px;color:var(--lime)">Elegant selection</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20250204_173517.jpg" alt="Indoor gift plants" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Indoor gifts</div><div style="font-size:12px;color:var(--lime)">Home decor</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20250204_173636.jpg" alt="Corporate gifts" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Corporate gifts</div><div style="font-size:12px;color:var(--lime)">Business occasions</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20250204_173722.jpg" alt="Festive gifts" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Festive plants</div><div style="font-size:12px;color:var(--lime)">Celebrations</div></div>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border-radius:16px;overflow:hidden">
+      <img src="assets/images/gift/20250204_174042.jpg" alt="Special gift" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,42,30,.82))"></div>
+      <div style="position:absolute;left:16px;bottom:16px;color:#fff"><div style="font-weight:700;font-size:17px">Unique gifts</div><div style="font-size:12px;color:var(--lime)">Stand out</div></div>
     </div>
   </div>
 </div>
 
-<div style="position:relative;z-index:2;padding:0 56px 80px;max-width:1240px;margin:0 auto">
-  <div style="columns:4;column-gap:18px">
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g01.jpg" alt="Mini cactus & succulent jars" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Mini cactus &amp; succulent jars</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Return-gift favourites</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g03.jpg" alt="Money tree" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Money tree (Pachira)</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Braided trunk · lucky gift</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g08.jpg" alt="Lucky bamboo pyramid" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Lucky bamboo pyramid</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Lattice-trained</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g02.jpg" alt="Red Aglaonema in glass" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Red Aglaonema in glass</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Ribbon-wrapped vase</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g07.jpg" alt="Lucky bamboo tower" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Lucky bamboo tower</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Cone-shaped bowl</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g04.jpg" alt="Kumquat" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Kumquat (good-luck orange)</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Festive fruiting pot</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g10.jpg" alt="Propagation test-tube stand" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Propagation test-tube stand</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Aglaonema cuttings</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g09.jpg" alt="Succulent gift basket" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Succulent gift basket</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">With keepsake charm</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g06.jpg" alt="Driftwood tiered planter" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Driftwood tiered planter</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Statement gift piece</div>
-      </div>
-    </div>
-    <div style="break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease;background:rgba(255,255,255,.06)">
-      <img src="assets/images/gifting/g05.jpg" alt="Kumquat in fortune pot" style="width:100%;height:auto;display:block">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(14,42,30,.85));pointer-events:none"></div>
-      <div style="position:absolute;left:16px;bottom:16px;right:16px;pointer-events:none">
-        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#fff">Kumquat in fortune pot</div>
-        <div style="font-size:12px;color:var(--lime);margin-top:4px;font-weight:600">Prosperity gift</div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:48px">
-    <a href="https://wa.me/918688644443?text=Hi%20Trinetra%20Nursery%2C%20I%27d%20like%20to%20inquire%20about%20your%20gift%20plants." style="display:inline-block;background:var(--grn);color:#fff;font-size:15px;font-weight:700;padding:16px 36px;border-radius:100px;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease">Inquire about gift plants →</a>
-  </div>
-</div>
-
-<footer style="background:var(--pine);color:#cfe0cf;padding:56px 56px 32px;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)">
+<div style="background:var(--pine);color:#cfe0cf;padding:80px 56px 40px;position:relative;overflow:hidden">
   <div style="position:absolute;bottom:-140px;left:10%;width:360px;height:360px;background:radial-gradient(circle,#1f9d55,transparent 70%);filter:blur(40px);opacity:.4;animation:tnBlobB 20s ease-in-out infinite"></div>
   <div style="max-width:1240px;margin:0 auto;position:relative;z-index:1">
     <div style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)">
@@ -154,23 +135,24 @@
         <div style="display:flex;flex-direction:column;gap:8px;font-size:16px">
           <a href="tel:+918688644443" style="color:#fff;text-decoration:none;font-weight:600">+91 86886 44443</a>
           <a href="tel:+919133342334" style="color:#fff;text-decoration:none;font-weight:600">+91 91333 42334</a>
-          <a href="mailto:trinetranursery@gmail.com" style="color:#cfe0cf;text-decoration:none">trinetranursery@gmail.com</a>
+          <a href="mailto:&#116;&#114;&#105;&#110;&#101;&#116;&#114;&#97;&#110;&#117;&#114;&#115;&#101;&#114;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" style="color:#cfe0cf;text-decoration:none">&#116;&#114;&#105;&#110;&#101;&#116;&#114;&#97;&#110;&#117;&#114;&#115;&#101;&#114;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
         </div>
       </div>
       <div>
-        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Navigate</div>
-        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
-          <a href="index.html" style="color:#cfe0cf;text-decoration:none;transition:color .25s ease">Home</a>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;font-weight:700">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#cfe0cf">
+          <a href="index.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Home</a>
+          <a href="indoor.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Indoor Plants</a>
+          <a href="flower.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Flower Plants</a>
+          <a href="fruit.html" style="cursor:pointer;transition:color .25s ease;color:#cfe0cf;text-decoration:none">Fruit Plants</a>
         </div>
       </div>
     </div>
     <div style="padding-top:24px;font-size:13px;color:#7e9683">© 2024 Trinetra Nursery. All rights reserved.</div>
   </div>
-</footer>
-
 </div>
 
+</div>
 <script src="assets/js/site.js"></script>
-
 </body>
 </html>

@@ -1,8 +1,7 @@
 /* ========================================
    CUSTOMER REVIEWS SYSTEM - STYLES v3
    Modern, responsive, accessible.
-   Keeps the original Trinetra Nursery design system (CSS variables below)
-   and ONLY adds the styles the new rating/summary/loading pieces need.
+   Keeps the original Trinetra Nursery design system (CSS variables below).
    ======================================== */
 
 /* ===== ANIMATIONS ===== */
@@ -98,30 +97,11 @@
 .tn-char-counter.is-near-limit { color: #f59e0b; }
 .tn-char-counter.is-over-limit  { color: #dc2626; }
 
-/* ===== STAR RATING WIDGET (keyboard + touch accessible) ===== */
-.tn-rating-group { border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-.tn-rating {
-  display: inline-flex; gap: 6px;
-}
-.tn-rating-star {
-  appearance: none; border: 0; background: none; cursor: pointer;
-  font-size: 34px; line-height: 1; color: #cdd8cd; padding: 2px 6px;
-  border-radius: 10px; transition: color .15s ease, transform .15s ease;
-}
-.tn-rating-star:hover,
-.tn-rating-star:focus-visible { color: #f5b301; transform: scale(1.15); }
-.tn-rating-star.is-selected { color: #f5b301; }
-
 /* Visible focus ring for keyboard users */
-.tn-rating-star:focus-visible,
 .tn-review-submit:focus-visible {
   outline: 3px solid rgba(31, 157, 85, .45);
   outline-offset: 2px;
 }
-
-.tn-field-error { color: #dc2626; font-size: 13px; margin: 0; }
-
-.tn-rating-star:disabled { opacity: .45; cursor: not-allowed; }
 
 /* ===== SUBMIT BUTTON ===== */
 .tn-review-submit {
@@ -142,36 +122,6 @@
   width: 18px; height: 18px; border: 3px solid rgba(255, 255, 255, .4);
   border-top-color: #fff; border-radius: 50%; animation: tnSpin .7s linear infinite;
 }
-
-/* ===== RATING SUMMARY ===== */
-.tn-reviews-summary { margin: 0 0 32px; }
-.tn-summary-card {
-  display: flex; flex-wrap: wrap; gap: 32px; align-items: center;
-  background: #fff; border: 1px solid var(--line); border-radius: 18px;
-  padding: 24px 28px; box-shadow: 0 4px 16px rgba(14, 42, 30, 0.04);
-}
-.tn-summary-score { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
-.tn-summary-average {
-  font-family: 'Bricolage Grotesque', sans-serif; font-size: 52px;
-  font-weight: 800; line-height: 1; color: var(--pine);
-}
-.tn-summary-stars { font-size: 22px; color: #f5b301; letter-spacing: 2px; margin-top: 4px; }
-.tn-summary-total { font-size: 13px; color: var(--muted); margin-top: 4px; }
-
-.tn-summary-bars { flex: 1; min-width: 240px; display: grid; gap: 8px; }
-.tn-summary-bar-row {
-  display: grid; grid-template-columns: 34px 1fr 30px; gap: 10px;
-  align-items: center; font-size: 13px; color: var(--muted);
-}
-.tn-summary-bar-track {
-  height: 8px; background: var(--line); border-radius: 100px; overflow: hidden;
-}
-.tn-summary-bar-fill {
-  height: 100%; background: linear-gradient(90deg, var(--grn), var(--lime));
-  border-radius: 100px; transition: width .5s ease;
-}
-.tn-summary-bar-label { text-align: right; }
-.tn-summary-bar-count { text-align: left; font-weight: 600; color: var(--ink); }
 
 /* ===== REVIEWS DISPLAY ===== */
 .tn-reviews-list {
@@ -202,7 +152,6 @@
   font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px;
   color: var(--pine); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.tn-review-stars { color: #f5b301; font-size: 15px; letter-spacing: 1px; display: block; margin-top: 2px; }
 .tn-review-date { font-size: 13px; color: var(--muted); margin-top: 3px; display: block; }
 .tn-review-text {
   font-size: 15px; line-height: 1.65; color: #3c4a39; word-wrap: break-word;
@@ -248,7 +197,6 @@
   .tn-reviews-title { font-size: 36px; }
   .tn-review-form-wrap { padding: 28px; }
   .tn-reviews-list { grid-template-columns: 1fr; gap: 20px; }
-  .tn-summary-card { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 640px) {
