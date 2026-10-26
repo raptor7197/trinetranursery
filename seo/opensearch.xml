@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Trinetra Nursery</ShortName>
+  <Description>Search Trinetra Nursery for plants, landscaping services, and gardening products in Kadiyam, Andhra Pradesh</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://trinetranursery.in/assets/images/logo-icon.png</Image>
+  <Image width="64" height="64" type="image/png">https://trinetranursery.in/assets/images/logo-icon.png</Image>
+  <Url type="text/html" template="https://www.google.com/search?q=site:trinetranursery.in+{searchTerms}"/>
+  <Url type="application/x-suggestions+json" template="https://trinetranursery.in/search-suggestions.php?q={searchTerms}"/>
+  <moz:SearchForm>https://trinetranursery.in</moz:SearchForm>
+  <Tags>plants nursery kadiyam landscaping fruits flowers indoor bonsai</Tags>
+  <Contact>trinetranursery@gmail.com</Contact>
+  <Developer>Trinetra Nursery Web Team</Developer>
+  <Attribution>Search data provided by Trinetra Nursery © 2024</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en-in</Language>
+  <Language>hi-in</Language>
+  <Language>te-in</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+</OpenSearchDescription>

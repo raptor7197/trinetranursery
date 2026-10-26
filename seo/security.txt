@@ -1,0 +1,20 @@
+# Our security contact information
+# https://securitytxt.org/
+
+Contact: mailto:trinetranursery@gmail.com
+Contact: tel:+918688644443
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en, hi, te
+Canonical: https://trinetranursery.in/.well-known/security.txt
+
+# Our security policy
+Policy: https://trinetranursery.in/security-policy.html
+
+# Acknowledgments
+Acknowledgments: https://trinetranursery.in/security-thanks.html
+
+# Hiring
+Hiring: https://trinetranursery.in/#contact
+
+# Please report security vulnerabilities responsibly
+# We appreciate your efforts to make our website more secure

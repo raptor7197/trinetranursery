@@ -1,0 +1,33 @@
+<!-- ===== NEWS UPDATES SECTION ===== -->
+<!--
+  HOW TO USE:
+  1. Paste this section into your page where you want news updates to appear.
+  2. Add to <head>:
+       <link rel="stylesheet" href="assets/css/news.css">
+  3. Add the script just before </body>:
+       <script src="assets/js/news.js"></script>
+  4. Customize the news articles in assets/js/news.js
+-->
+<section id="news" class="tn-news-section" aria-labelledby="tn-news-heading">
+  <div class="tn-news-inner">
+
+    <!-- Section Header -->
+    <header class="tn-news-header" data-reveal="up">
+      <p class="tn-news-badge">Stay updated</p>
+      <h2 id="tn-news-heading" class="tn-news-title">Latest News Updates</h2>
+    </header>
+
+    <!-- News Grid (populated by JavaScript) -->
+    <div id="tn-news-grid" class="tn-news-grid">
+      <!-- News cards will be inserted here by news.js -->
+      
+      <!-- Fallback content if JavaScript is disabled -->
+      <noscript>
+        <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--muted);">
+          <p>Please enable JavaScript to view the latest news updates.</p>
+        </div>
+      </noscript>
+    </div>
+
+  </div>
+</section>
